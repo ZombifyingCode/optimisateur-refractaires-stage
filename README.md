@@ -20,8 +20,9 @@ Ce projet rassemble deux outils d'optimisation développés lors d'un stage ing�
 
 ## Accès aux Outils
 
-- **[Optimisateur de Découpe](https://zombifyingcode.github.io/optimisateur-refractaires-stage/index-decoupe.html)** - Outil principal
-- **[Optimisateur de Murs](https://zombifyingcode.github.io/optimisateur-refractaires-stage/)** - Construction de murs
+- **[Page d'accueil](https://zombifying-code.github.io/nom-de-votre-repository/)**
+- **[Optimiseur de Découpe](https://zombifying-code.github.io/nom-de-votre-repository/decoupe/)**
+- **[Optimiseur de Murs](https://zombifying-code.github.io/nom-de-votre-repository/murs/)**
 
 ##  Fonctionnalités Principales
 
