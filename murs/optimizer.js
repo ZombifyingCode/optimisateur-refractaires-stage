@@ -11,42 +11,42 @@
         function loadExample() {
             stockData = [
             //    // Famille ELECTROFONDUS avec différentes qualités électrofondus
-            //     {supplier: "SEFPR",ref: "PFI_023DA_000", length: 1500, width: 300, thickness: 412, quantity: 10, family: "ELECTROFONDUS", quality: "AZS 33% RC"},
-            //     {supplier: "SEFPR",ref: "PFI_04X5A_000", length: 890, width: 400, thickness: 250, quantity: 21, family: "ELECTROFONDUS", quality: "AZS 33% VF"},
-            //     {supplier: "SEFPR",ref: "PFI_05B2A_000", length: 1200, width: 350, thickness: 380, quantity: 13, family: "ELECTROFONDUS", quality: "AZS 41% VF"},
-            //     {supplier: "SEFPR",ref: "PFI_06C3A_000", length: 800, width: 300, thickness: 250, quantity: 5, family: "ELECTROFONDUS", quality: "95% ZrO2"},
-            //     {supplier: "SEFPR",ref: "PFI_07D4A_000", length: 950, width: 280, thickness: 320, quantity: 12, family: "ELECTROFONDUS", quality: "ER 1682 RX"},
-            //     {supplier: "SEFPR",ref: "PFI_08E5A_000", length: 750, width: 250, thickness: 200, quantity: 4, family: "ELECTROFONDUS", quality: "ER 5312 RX"},
-            //     {supplier: "SEFPR",ref: "PFI_09F6A_000", length: 600, width: 300, thickness: 150, quantity: 11, family: "ELECTROFONDUS", quality: "Jargal"},
+                 {supplier: "SEFPR",ref: "PFI_023DA_000", length: 1500, width: 300, thickness: 412, quantity: 10, family: "ELECTROFONDUS", quality: "AZS 33% RC"},
+               {supplier: "SEFPR",ref: "PFI_04X5A_000", length: 890, width: 400, thickness: 250, quantity: 21, family: "ELECTROFONDUS", quality: "AZS 33% VF"},
+                {supplier: "SEFPR",ref: "PFI_05B2A_000", length: 1200, width: 350, thickness: 380, quantity: 13, family: "ELECTROFONDUS", quality: "AZS 41% VF"},
+                 {supplier: "SEFPR",ref: "PFI_06C3A_000", length: 800, width: 300, thickness: 250, quantity: 5, family: "ELECTROFONDUS", quality: "95% ZrO2"},
+                {supplier: "SEFPR",ref: "PFI_07D4A_000", length: 950, width: 280, thickness: 320, quantity: 12, family: "ELECTROFONDUS", quality: "ER 1682 RX"},
+                 {supplier: "SEFPR",ref: "PFI_08E5A_000", length: 750, width: 250, thickness: 200, quantity: 4, family: "ELECTROFONDUS", quality: "ER 5312 RX"},
+                {supplier: "SEFPR",ref: "PFI_09F6A_000", length: 600, width: 300, thickness: 150, quantity: 11, family: "ELECTROFONDUS", quality: "Jargal"},
                 
-            //     // Famille ZIRCON DENSE/MULLITE avec qualités zircon
-            //     {supplier: "SEFPR",ref: "PFI_0700C_000", length: 1400, width: 700, thickness: 400, quantity: 53, family: "ZIRCON DENSE", quality: "ZM30%"},
-            //     {supplier: "SEFPR",ref: "PFI_0550D_001", length: 1100, width: 550, thickness: 320, quantity: 4, family: "ZIRCON MULLITE", quality: "ZM20%"},
+                 // Famille ZIRCON DENSE/MULLITE avec qualités zircon
+                 {supplier: "SEFPR",ref: "PFI_0700C_000", length: 1400, width: 700, thickness: 400, quantity: 53, family: "ZIRCON DENSE", quality: "ZM30%"},
+                 {supplier: "SEFPR",ref: "PFI_0550D_001", length: 1100, width: 550, thickness: 320, quantity: 4, family: "ZIRCON MULLITE", quality: "ZM20%"},
                 
-            //     // Famille SILLIMANITE avec qualités silico-alumineux
-            //     {supplier: "SEFPR",ref: "PFI_1400E_000", length: 950, width: 480, thickness: 310, quantity: 46, family: "SILLIMANITE", quality: ">99% Al2O3"},
-            //     {supplier: "SEFPR",ref: "PFI_0401E_000", length: 850, width: 420, thickness: 280, quantity: 8, family: "SILLIMANITE", quality: "60% Al2O3"},
-            //     {supplier: "SEFPR",ref: "PFI_1402E_000", length: 750, width: 380, thickness: 250, quantity: 5, family: "SILLIMANITE", quality: "40/42% Al2O3"},
-            //     {supplier: "SEFPR",ref: "PFI_7403E_000", length: 650, width: 340, thickness: 220, quantity: 7, family: "SILLIMANITE", quality: "35% Al2O3"},
+                 // Famille SILLIMANITE avec qualités silico-alumineux
+                 {supplier: "SEFPR",ref: "PFI_1400E_000", length: 950, width: 480, thickness: 310, quantity: 46, family: "SILLIMANITE", quality: ">99% Al2O3"},
+                {supplier: "SEFPR",ref: "PFI_0401E_000", length: 850, width: 420, thickness: 280, quantity: 8, family: "SILLIMANITE", quality: "60% Al2O3"},
+                 {supplier: "SEFPR",ref: "PFI_1402E_000", length: 750, width: 380, thickness: 250, quantity: 5, family: "SILLIMANITE", quality: "40/42% Al2O3"},
+                 {supplier: "SEFPR",ref: "PFI_7403E_000", length: 650, width: 340, thickness: 220, quantity: 7, family: "SILLIMANITE", quality: "35% Al2O3"},
                 
             //     // Famille DIVERS avec qualités magnésie
-            //     {supplier: "SEFPR",ref: "PFI_2600G_000", length: 1300, width: 650, thickness: 380, quantity: 52, family: "DIVERS", quality: "MgO > 95%"},
-            //     {supplier: "SEFPR",ref: "PFI_6201G_000", length: 1100, width: 550, thickness: 320, quantity: 13, family: "DIVERS", quality: "MgO 85-90%"},
-            //     {supplier: "SEFPR",ref: "PFI_6402G_000", length: 900, width: 450, thickness: 280, quantity: 4, family: "DIVERS", quality: "MgO 70-75%"},
-            //     {supplier: "SEFPR",ref: "PFI_6603G_000", length: 700, width: 350, thickness: 240, quantity: 6, family: "DIVERS", quality: "MgO 50-60%"},
+                 {supplier: "SEFPR",ref: "PFI_2600G_000", length: 1300, width: 650, thickness: 380, quantity: 52, family: "DIVERS", quality: "MgO > 95%"},
+               {supplier: "SEFPR",ref: "PFI_6201G_000", length: 1100, width: 550, thickness: 320, quantity: 13, family: "DIVERS", quality: "MgO 85-90%"},
+                {supplier: "SEFPR",ref: "PFI_6402G_000", length: 900, width: 450, thickness: 280, quantity: 4, family: "DIVERS", quality: "MgO 70-75%"},
+                 {supplier: "SEFPR",ref: "PFI_6603G_000", length: 700, width: 350, thickness: 240, quantity: 6, family: "DIVERS", quality: "MgO 50-60%"},
                 
             //     // Famille SILICE avec qualités silice
-            //     {supplier: "SEFPR",ref: "PFI_0450B_001", length: 1200, width: 600, thickness: 350, quantity: 75, family: "SILICE", quality: "SiO2 99%"},
-            //     {supplier: "SEFPR",ref: "PFI_0300A_002", length: 1000, width: 500, thickness: 300, quantity: 18, family: "SILICE", quality: "SiO2 95%"},
+               {supplier: "SEFPR",ref: "PFI_0450B_001", length: 1200, width: 600, thickness: 350, quantity: 75, family: "SILICE", quality: "SiO2 99%"},
+                 {supplier: "SEFPR",ref: "PFI_0300A_002", length: 1000, width: 500, thickness: 300, quantity: 18, family: "SILICE", quality: "SiO2 95%"},
                 
                 // Famille ISOLANTS avec quelques qualités mixtes
-            //    {supplier: "SEFPR",ref: "PFI_2650F_001", length: 800, width: 400, thickness: 250, quantity: 12, family: "ISOLANTS", quality: "Non défini"},
-            //    {supplier: "SEFPR",ref: "PFI_3950H_001", length: 900, width: 450, thickness: 280, quantity: 27, family: "40% AL2O3", quality: "Non défini"},
+              {supplier: "SEFPR",ref: "PFI_2650F_001", length: 800, width: 400, thickness: 250, quantity: 12, family: "ISOLANTS", quality: "Non défini"},
+                {supplier: "SEFPR",ref: "PFI_3950H_001", length: 900, width: 450, thickness: 280, quantity: 27, family: "40% AL2O3", quality: "Non défini"},
                 
                 // Stock Standard
-                {supplier: "Non défini",ref: "Non défini", length: 600, width: 500, thickness: 120, quantity: 40000, family: "Non défini", quality: "Non défini"},
-                {supplier: "Non défini",ref: "Non défini", length: 600, width: 500, thickness: 100, quantity: 40000, family: "Non défini", quality: "Non défini"},
-                {supplier: "Non défini",ref: "Non défini", length: 600, width: 500, thickness: 75, quantity: 40000, family: "Non défini", quality: "Non défini"}
+               // {supplier: "Non défini",ref: "Non défini", length: 600, width: 500, thickness: 120, quantity: 40000, family: "Non défini", quality: "Non défini"},
+               // {supplier: "Non défini",ref: "Non défini", length: 600, width: 500, thickness: 100, quantity: 40000, family: "Non défini", quality: "Non défini"},
+               // {supplier: "Non défini",ref: "Non défini", length: 600, width: 500, thickness: 75, quantity: 40000, family: "Non défini", quality: "Non défini"}
             ];
             originalStockQuantities={};
             stockAvailability = {};
