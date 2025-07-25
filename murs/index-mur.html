@@ -1,0 +1,109 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimisateur de Murs Réfractaires - Jointures Décalées</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+     <!-- Le fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧱 Optimisateur de Murs Réfractaires</h1>
+            <p>Version avec Jointures Décalées (50mm minimum) + Tri par Famille/Qualité</p>
+        </div>
+        <div class="main-content">
+            <div class="section">
+                <h2>📐 Configuration</h2>
+                <div class="input-group">
+                    <label>Dimensions du Mur (mm)</label>
+                    <div class="dimensions-grid">
+                        <div><label>Longueur</label><input type="number" id="targetLength" value="3000" min="100"></div>
+                        <div><label>Hauteur</label><input type="number" id="targetWidth" value="2000" min="100"></div>
+                        <div><label>Épaisseur</label><input type="number" id="targetThickness" value="250" min="50"></div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Nombre de Rangées Horizontales</label>
+                    <input type="number" id="numRows" value="3" min="1" max="30" step="1">
+                    <small style="color: #666; font-size: 0.8rem;">Guide pour diviser le mur (hauteurs adaptatives)</small>
+                </div>
+                <div class="input-group">
+                    <label>Décalage minimum des jointures (mm)</label>
+                    <input type="number" id="jointOffset" value="50" min="10" max="200" step="10">
+                    <small style="color: #666; font-size: 0.8rem;">Distance minimale entre joints verticaux</small>
+                </div>
+                <button class="btn" onclick="optimizeWall()">🚀 Optimiser avec Jointures Décalées</button>
+            </div>
+            <div class="section">
+                <h2>📦 Stock</h2>
+                <div class="input-group">
+                    <label>📁 Import Excel</label>
+                    <input type="file" id="excelFile" accept=".xlsx,.xls" style="border: 2px dashed #3498db; background: #f8f9fa;">
+                </div>
+                <div class="btn-grid">
+                    <button class="btn btn-secondary" onclick="loadExample()">📝 Charger Exemple</button>
+                    <button class="btn btn-danger" onclick="clearStock()">🗑️ Vider Stock</button>
+                </div>
+                <div class="input-group">
+                    <label>🔍 Filtres</label>
+                    <div class="dimensions-grid">
+                        <div><label>Famille</label><select id="familyFilter"><option value="">Toutes les familles</option></select></div>
+                        <div><label>Qualité</label><select id="qualityFilter"><option value="">Toutes les qualités</option></select></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div id="importStatus" style="margin-top: 10px; display: none;"></div>
+                <div class="input-group">
+                    <label>Stock Chargé (<span id="stockCount">0</span> casiers - <span id="filteredCount">0</span> filtrés)</label>
+                    <div class="stock-container">
+                        <table class="stock-table">
+                            <thead><tr><th>Casier</th><th>Famille</th><th>Qualité Générique</th><th>Qualité Fournisseur</th><th>Longueur</th><th>Largeur</th><th>Épaisseur</th><th>Stock Initial</th><th>Stock Actuel</th><th>Compatible</th><th>Score</th></tr></thead>
+                            <tbody id="stockTableBody"><tr><td colspan="11" style="text-align: center; color: #666; padding: 20px;">Chargez un stock pour commencer</td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section result-section" id="resultsSection" style="display: none;">
+            <h2>🎯 Résultats avec Jointures Décalées</h2>
+            <div id="status" class="alert alert-success">Optimisation en cours...</div>
+            <div class="progress-bar" id="progressBarContainer" style="display: none;">
+                <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+            </div>
+            <div class="result-grid">
+                <div class="wall-visualization">
+                    <h3 style="text-align: center; margin-bottom: 10px;"></h3>
+                    <div id="wallBlocks"></div>
+                    <div id="cursor" class="cursor"></div>
+                    <div id="coordinates" style="position: absolute; bottom: 10px; left: 10px; background: rgba(0, 0, 0, 0.5); color: white; padding: 5px; border-radius: 3px; font-size: 12px; z-index: 10;">X: 0, Y: 0</div>
+                    <div style="position: absolute; top: 10px; right: 10px; background: #27ae60; color: white; padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: bold;" id="coverageDisplay">100%</div>
+                </div>
+                <div class="stats">
+                    <h3>📊 Statistiques</h3>
+                    <div class="stat-item"><span>Casiers utilisés :</span><strong id="blocksUsed">0</strong></div>
+                    <div class="stat-item"><span>Rangées créées :</span><strong id="rowsCreated">0</strong></div>
+                    <div class="stat-item"><span>Découpes totales :</span><strong id="cutsNeeded">0</strong></div>
+                    <div class="stat-item"><span>Violations jointures :</span><strong id="jointViolations">0</strong></div>
+                    <div class="stat-item"><span>Couverture :</span><strong id="coverage">100%</strong></div>
+                    <div class="stat-item"><span>Volume chutes :</span><strong id="wasteVolume">0 m³</strong></div>
+                    <div class="stat-item"><span>Volume mur :</span><strong id="wallVolume">0 m³</strong></div>
+                    <div class="stat-item"><span>Efficacité :</span><strong id="efficiency">0%</strong></div>
+                </div>
+                <div class="stats">
+                    <h3>📋 Casiers Utilisés</h3>
+                    <div id="blocksList" style="max-height: 250px; overflow-y: auto; font-size: 0.85rem;"></div>
+                </div>
+            </div>
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 2px solid #ddd;">
+                <h3 style="color: #2c3e50; margin-bottom: 10px;">📄 Export des Résultats</h3>
+                <button class="btn btn-warning" onclick="exportToPDF()">📄 Export PDF avec Plan</button>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts JavaScript -->
+    <script src="optimizer.js"></script>
+</body>
+</html>
