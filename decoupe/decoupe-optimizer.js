@@ -31,11 +31,8 @@ const familyColors = {
 
 // ====================================================================
 // 2. MODULE GESTION DES FICHIERS EXCEL
+//Gestion de l'importation d'un fichier Excel
 // ====================================================================
-
-/**
- * Gestion de l'importation d'un fichier Excel
- */
 async function handleExcelFile(event) {
     const file = event.target.files[0];
     if (!file) return;
@@ -70,7 +67,9 @@ async function handleExcelFile(event) {
         if (jsonData.length === 0) {
             throw new Error('Le fichier Excel semble vide');
         }
-
+        // Vérifierque les données sont correctement extraites
+        console.log(jsonData);
+        // Traiter les données 
         const parsedStock = parseInventaireBEFours(jsonData);
 
         if (parsedStock.length === 0) {
@@ -79,7 +78,7 @@ async function handleExcelFile(event) {
 
         allStockData = parsedStock;
         stockData = parsedStock;
-
+        // Mise à jour des filtres
         FilterManager.setupFamilyFilter();
         UIManager.updateStockTable();
 
@@ -93,9 +92,9 @@ async function handleExcelFile(event) {
     }
 }
 
-/**
- * Analyse et extraction des données du fichier Excel format BE Fours
- */
+
+// Analyse et extraction des données du fichier Excel format BE Fours
+
 function parseInventaireBEFours(jsonData) {
     if (jsonData.length < 5) {
         throw new Error('Fichier trop court - format Inventaire BE Fours attendu');
@@ -112,13 +111,14 @@ function parseInventaireBEFours(jsonData) {
     // Mapping des colonnes selon le format exact avec QUALITÉ
     const columnIndices = {
         famille: 1,     // Colonne B: FAMILLE
-        casier: 3,      // Colonne D: CASIER  
+        casier: 3,      // Colonne D: CASIER
+        designation : 4, //  Colonne E: NOM
         longueur: 6,    // Colonne G: LONGUEUR
         largeur: 7,     // Colonne H: LARGEUR
         epaisseur: 8,   // Colonne I: EPAISSEUR
         qualite: 10,    // Colonne K: QUALITÉ
-        supplier: 11,
-        stock: 12       // Colonne L: STOCK
+        supplier: 11,   // Colonne L: QUALITÉ FOURNI
+        stock: 12       // Colonne M: STOCK
     };
 
     const parsedData = [];
@@ -131,14 +131,14 @@ function parseInventaireBEFours(jsonData) {
         try {
             const famille = String(row[columnIndices.famille] || '').trim().toUpperCase();
             const casier = String(row[columnIndices.casier] || '').trim();
-            const qualite = String(row[columnIndices.qualite] || 'Non défini').trim();
+            const designation = String(row[columnIndices.designation] || '').trim();
+            const qualite = String(row[columnIndices.qualite] || '').trim();
             const supplier = String(row[columnIndices.supplier] || '').trim();
             
             // Parsing des dimensions numériques
-            const longueur = parseFloat(String(row[columnIndices.longueur] || '0').replace(',', '.')) || 0;
-            const largeur = parseFloat(String(row[columnIndices.largeur] || '0').replace(',', '.')) || 0;
-            const epaisseur = parseFloat(String(row[columnIndices.epaisseur] || '0').replace(',', '.')) || 0;
-            
+            const longueur = parseFloat(row[columnIndices.longueur]);
+            const largeur = parseFloat(row[columnIndices.largeur]);
+            const epaisseur = parseFloat(row[columnIndices.epaisseur]);
             // Parsing du stock (format "10 PC" -> 10)
             let stock = 0;
             const stockStr = String(row[columnIndices.stock] || '0');
@@ -160,7 +160,8 @@ function parseInventaireBEFours(jsonData) {
                 quantity: stock,
                 family: famille,
                 quality: qualite,
-                supplier: supplier 
+                supplier: supplier,
+                designation : designation
             });
 
         } catch (error) {
@@ -248,6 +249,13 @@ const DataUtils = {
         const suppliers = [...new Set(allStockData.map(item => item.supplier))];
         return suppliers.sort();
     },
+     /**
+     * Récupère les noms uniques des données
+     */
+     getUniqueDesignations() {
+        const designations = [...new Set(allStockData.map(item => item.designation))];
+        return designations.sort();
+    },
 
     /**
      * Génère toutes les permutations possibles des dimensions d'un bloc
@@ -287,20 +295,7 @@ const FilterManager = {
         families.forEach(family => {
             const option = document.createElement('option');
             option.value = family;
-            
-            const familyIcons = {
-                'ELECTROFONDUS': '⚡',
-                'SILICE': '🧊',
-                'ZIRCON DENSE': '💎',
-                'ZIRCON MULLITE': '🔷',
-                'SILLIMANITE': '🗿',
-                'ISOLANTS': '🛡️',
-                'DIVERS': '📦',
-                '40% AL2O3': '🧱'
-            };
-            
-            const icon = familyIcons[family] || '📋';
-            option.textContent = `${icon} ${family}`;
+            option.textContent = ` ${family}`;
             familyFilter.appendChild(option);
         });
 
@@ -308,32 +303,7 @@ const FilterManager = {
         qualities.forEach(quality => {
             const option = document.createElement('option');
             option.value = quality;
-            
-            const qualityIcons = {
-                'AZS 33% RC': '💎',
-                'AZS 33% VF': '💠',
-                'AZS 41% VF': '🔷',
-                'Non défini': '❓',
-                'Jargal': '🔶',
-                '95% ZrO2': '💍',
-                'ER 1682 RX': '🔹',
-                'ER 5312 RX': '🟦',
-                'ZM30%': '🔵',
-                'ZM20%': '🟣',
-                '>99% Al2O3': '⚪',
-                '60% Al2O3': '🔘',
-                '40/42% Al2O3': '⚫',
-                '35% Al2O3': '🟤',
-                'MgO > 95%': '🟢',
-                'MgO 85-90%': '🟩',
-                'MgO 70-75%': '💚',
-                'MgO 50-60%': '🌿',
-                'SiO2 99%': '❄️',
-                'SiO2 95%': '🧊'
-            };
-            
-            const icon = qualityIcons[quality] || '⭐';
-            option.textContent = `${icon} ${quality}`;
+            option.textContent = `${quality}`;
             qualityFilter.appendChild(option);
         });
 
@@ -388,7 +358,7 @@ const UIManager = {
         if (stockData.length === 0) {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td colspan="8" style="text-align: center; color: #7f8c8d; padding: 30px;">
+                <td colspan="9" style="text-align: center; color: #7f8c8d; padding: 30px;">
                     📁 Aucune donnée à afficher
                 </td>
             `;
@@ -409,6 +379,7 @@ const UIManager = {
                 <td ${qualityClass}>${block.quality}</td>
                 <td>${block.supplier}</td>
                 <td style="font-weight: 600; color: #e17055; font-size: 0.8rem;">${block.ref}</td>
+                <td>${block.designation}</td>
                 <td>${block.length}</td>
                 <td>${block.width}</td>
                 <td>${block.thickness}</td>
@@ -1365,6 +1336,7 @@ const PDFExporter = {
 
         const fileName = `Fiche_Decoupe_BEFours_${selectedCandidate.block.ref}_${targetL}x${targetW}x${targetT}.pdf`;
         doc.save(fileName);
+        window.open(doc.output('bloburl'))
     }
 };
 
