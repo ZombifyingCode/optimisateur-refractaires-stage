@@ -9,9 +9,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <!-- Scripts JavaScript -->
-    <script src="decoupe-optimizer.js"></script> 
+    <script src="js/optimizer.js"></script> 
     <!-- Le fichier CSS -->
-    <link rel="stylesheet" href="decoupe-styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -122,6 +122,7 @@
                                 <th>Qualité Générique</th>
                                 <th>Qualité Fournisseur</th>
                                 <th>Casier</th>
+                                <th>Désignation</th>
                                 <th>L (mm)</th>
                                 <th>l (mm)</th>
                                 <th>Ép. (mm)</th>
@@ -130,7 +131,7 @@
                         </thead>
                         <tbody id="stockTableBody">
                             <tr>
-                                <td colspan="8" style="text-align: center; color: #7f8c8d; padding: 30px;">
+                                <td colspan="9" style="text-align: center; color: #7f8c8d; padding: 30px;">
                                     📁 Importez votre fichier Excel ou cliquez sur "Charger Exemple"
                                 </td>
                             </tr>
@@ -147,7 +148,7 @@
             <div class="target-display" id="targetDisplay">
                 <div class="target-dimensions">1000 × 500 × 300 mm</div>
                 <div class="target-volume">Volume cible : 150 000 000 mm³</div>
-            </div>
+            </div> 
 
             <div class="alert alert-info" id="optimizationStatus">
                 Recherche en cours...
