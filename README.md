@@ -14,7 +14,7 @@ Ce projet rassemble deux outils d'optimisation développés lors d'un stage ing�
 
 ### 2. Optimisateur de Murs Réfractaires  
 - **Fonction** : Assemblage automatique de blocs pour construire un mur
-- **Contraintes** : Jointures décalées (minimum 50mm), respect des techniques métier
+- **Contraintes** : Jointures décalées, respect des techniques métier
 - **Interface** : Visualisation 2D avec détection des violations
 - **Export** : Plan de disposition avec données techniques
 
@@ -35,7 +35,7 @@ Ce projet rassemble deux outils d'optimisation développés lors d'un stage ing�
 
 ##  Technologies
 
-- **JavaScript natif** (sans framework pour simplicité de déploiement)
+- **JavaScript 
 - **CSS 3D Transforms** (visualisation 3D)
 - **SheetJS** (parsing Excel)
 - **jsPDF** (export PDF)
@@ -51,7 +51,7 @@ Ce projet rassemble deux outils d'optimisation développés lors d'un stage ing�
 
 ##  Contexte
 
-Projet développé lors d'un stage au Bureau d'Études Fours pour répondre aux besoins d'optimisation de la gestion du stock de matériaux réfractaires. Les outils s'intègrent dans le workflow existant et respectent les contraintes techniques métier.
+Projet développé lors d'un stage dans un bureau d'étude pour répondre aux besoins d'optimisation de la gestion du stock de matériaux réfractaires. Les outils s'intègrent dans le workflow existant et respectent les contraintes techniques métier.
 
 
 ---
