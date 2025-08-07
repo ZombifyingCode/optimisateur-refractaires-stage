@@ -11,43 +11,44 @@
         function loadExample() {
             stockData = [
             //    // Famille ELECTROFONDUS avec différentes qualités électrofondus
-                 {supplier: "SEFPR",ref: "PFI_023DA_000", length: 1500, width: 300, thickness: 412, quantity: 10, family: "ELECTROFONDUS", quality: "AZS 33% RC"},
-               {supplier: "SEFPR",ref: "PFI_04X5A_000", length: 890, width: 400, thickness: 250, quantity: 21, family: "ELECTROFONDUS", quality: "AZS 33% VF"},
-                {supplier: "SEFPR",ref: "PFI_05B2A_000", length: 1200, width: 350, thickness: 380, quantity: 13, family: "ELECTROFONDUS", quality: "AZS 41% VF"},
-                 {supplier: "SEFPR",ref: "PFI_06C3A_000", length: 800, width: 300, thickness: 250, quantity: 5, family: "ELECTROFONDUS", quality: "95% ZrO2"},
-                {supplier: "SEFPR",ref: "PFI_07D4A_000", length: 950, width: 280, thickness: 320, quantity: 12, family: "ELECTROFONDUS", quality: "ER 1682 RX"},
-                 {supplier: "SEFPR",ref: "PFI_08E5A_000", length: 750, width: 250, thickness: 200, quantity: 4, family: "ELECTROFONDUS", quality: "ER 5312 RX"},
-                {supplier: "SEFPR",ref: "PFI_09F6A_000", length: 600, width: 300, thickness: 150, quantity: 11, family: "ELECTROFONDUS", quality: "Jargal"},
+            //     {supplier: "SEFPR",ref: "PFI_023DA_000", length: 1500, width: 300, thickness: 412, quantity: 10, family: "ELECTROFONDUS", quality: "AZS 33% RC"},
+            //     {supplier: "SEFPR",ref: "PFI_04X5A_000", length: 890, width: 400, thickness: 250, quantity: 21, family: "ELECTROFONDUS", quality: "AZS 33% VF"},
+            //     {supplier: "SEFPR",ref: "PFI_05B2A_000", length: 1200, width: 350, thickness: 380, quantity: 13, family: "ELECTROFONDUS", quality: "AZS 41% VF"},
+            //     {supplier: "SEFPR",ref: "PFI_06C3A_000", length: 800, width: 300, thickness: 250, quantity: 5, family: "ELECTROFONDUS", quality: "95% ZrO2"},
+            //     {supplier: "SEFPR",ref: "PFI_07D4A_000", length: 950, width: 280, thickness: 320, quantity: 12, family: "ELECTROFONDUS", quality: "ER 1682 RX"},
+            //     {supplier: "SEFPR",ref: "PFI_08E5A_000", length: 750, width: 250, thickness: 200, quantity: 4, family: "ELECTROFONDUS", quality: "ER 5312 RX"},
+            //     {supplier: "SEFPR",ref: "PFI_09F6A_000", length: 600, width: 300, thickness: 150, quantity: 11, family: "ELECTROFONDUS", quality: "Jargal"},
                 
-                 // Famille ZIRCON DENSE/MULLITE avec qualités zircon
-                 {supplier: "SEFPR",ref: "PFI_0700C_000", length: 1400, width: 700, thickness: 400, quantity: 53, family: "ZIRCON DENSE", quality: "ZM30%"},
-                 {supplier: "SEFPR",ref: "PFI_0550D_001", length: 1100, width: 550, thickness: 320, quantity: 4, family: "ZIRCON MULLITE", quality: "ZM20%"},
+            //     // Famille ZIRCON DENSE/MULLITE avec qualités zircon
+            //     {supplier: "SEFPR",ref: "PFI_0700C_000", length: 1400, width: 700, thickness: 400, quantity: 53, family: "ZIRCON DENSE", quality: "ZM30%"},
+            //     {supplier: "SEFPR",ref: "PFI_0550D_001", length: 1100, width: 550, thickness: 320, quantity: 4, family: "ZIRCON MULLITE", quality: "ZM20%"},
                 
-                 // Famille SILLIMANITE avec qualités silico-alumineux
-                 {supplier: "SEFPR",ref: "PFI_1400E_000", length: 950, width: 480, thickness: 310, quantity: 46, family: "SILLIMANITE", quality: ">99% Al2O3"},
-                {supplier: "SEFPR",ref: "PFI_0401E_000", length: 850, width: 420, thickness: 280, quantity: 8, family: "SILLIMANITE", quality: "60% Al2O3"},
-                 {supplier: "SEFPR",ref: "PFI_1402E_000", length: 750, width: 380, thickness: 250, quantity: 5, family: "SILLIMANITE", quality: "40/42% Al2O3"},
-                 {supplier: "SEFPR",ref: "PFI_7403E_000", length: 650, width: 340, thickness: 220, quantity: 7, family: "SILLIMANITE", quality: "35% Al2O3"},
+            //     // Famille SILLIMANITE avec qualités silico-alumineux
+            //     {supplier: "SEFPR",ref: "PFI_1400E_000", length: 950, width: 480, thickness: 310, quantity: 46, family: "SILLIMANITE", quality: ">99% Al2O3"},
+            //     {supplier: "SEFPR",ref: "PFI_0401E_000", length: 850, width: 420, thickness: 280, quantity: 8, family: "SILLIMANITE", quality: "60% Al2O3"},
+            //     {supplier: "SEFPR",ref: "PFI_1402E_000", length: 750, width: 380, thickness: 250, quantity: 5, family: "SILLIMANITE", quality: "40/42% Al2O3"},
+            //     {supplier: "SEFPR",ref: "PFI_7403E_000", length: 650, width: 340, thickness: 220, quantity: 7, family: "SILLIMANITE", quality: "35% Al2O3"},
                 
             //     // Famille DIVERS avec qualités magnésie
-                 {supplier: "SEFPR",ref: "PFI_2600G_000", length: 1300, width: 650, thickness: 380, quantity: 52, family: "DIVERS", quality: "MgO > 95%"},
-               {supplier: "SEFPR",ref: "PFI_6201G_000", length: 1100, width: 550, thickness: 320, quantity: 13, family: "DIVERS", quality: "MgO 85-90%"},
-                {supplier: "SEFPR",ref: "PFI_6402G_000", length: 900, width: 450, thickness: 280, quantity: 4, family: "DIVERS", quality: "MgO 70-75%"},
-                 {supplier: "SEFPR",ref: "PFI_6603G_000", length: 700, width: 350, thickness: 240, quantity: 6, family: "DIVERS", quality: "MgO 50-60%"},
+            //     {supplier: "SEFPR",ref: "PFI_2600G_000", length: 1300, width: 650, thickness: 380, quantity: 52, family: "DIVERS", quality: "MgO > 95%"},
+            //     {supplier: "SEFPR",ref: "PFI_6201G_000", length: 1100, width: 550, thickness: 320, quantity: 13, family: "DIVERS", quality: "MgO 85-90%"},
+            //     {supplier: "SEFPR",ref: "PFI_6402G_000", length: 900, width: 450, thickness: 280, quantity: 4, family: "DIVERS", quality: "MgO 70-75%"},
+            //     {supplier: "SEFPR",ref: "PFI_6603G_000", length: 700, width: 350, thickness: 240, quantity: 6, family: "DIVERS", quality: "MgO 50-60%"},
                 
             //     // Famille SILICE avec qualités silice
-               {supplier: "SEFPR",ref: "PFI_0450B_001", length: 1200, width: 600, thickness: 350, quantity: 75, family: "SILICE", quality: "SiO2 99%"},
-                 {supplier: "SEFPR",ref: "PFI_0300A_002", length: 1000, width: 500, thickness: 300, quantity: 18, family: "SILICE", quality: "SiO2 95%"},
+            //     {supplier: "SEFPR",ref: "PFI_0450B_001", length: 1200, width: 600, thickness: 350, quantity: 75, family: "SILICE", quality: "SiO2 99%"},
+            //     {supplier: "SEFPR",ref: "PFI_0300A_002", length: 1000, width: 500, thickness: 300, quantity: 18, family: "SILICE", quality: "SiO2 95%"},
                 
                 // Famille ISOLANTS avec quelques qualités mixtes
-              {supplier: "SEFPR",ref: "PFI_2650F_001", length: 800, width: 400, thickness: 250, quantity: 12, family: "ISOLANTS", quality: "Non défini"},
-                {supplier: "SEFPR",ref: "PFI_3950H_001", length: 900, width: 450, thickness: 280, quantity: 27, family: "40% AL2O3", quality: "Non défini"},
+            //    {supplier: "SEFPR",ref: "PFI_2650F_001", length: 800, width: 400, thickness: 250, quantity: 12, family: "ISOLANTS", quality: "Non défini"},
+            //    {supplier: "SEFPR",ref: "PFI_3950H_001", length: 900, width: 450, thickness: 280, quantity: 27, family: "40% AL2O3", quality: "Non défini"},
                 
                 // Stock Standard
-               // {supplier: "Non défini",ref: "Non défini", length: 600, width: 500, thickness: 120, quantity: 40000, family: "Non défini", quality: "Non défini"},
-               // {supplier: "Non défini",ref: "Non défini", length: 600, width: 500, thickness: 100, quantity: 40000, family: "Non défini", quality: "Non défini"},
-               // {supplier: "Non défini",ref: "Non défini", length: 600, width: 500, thickness: 75, quantity: 40000, family: "Non défini", quality: "Non défini"}
+                {supplier: "Non défini",ref: "PFI_00100", length: 600, width: 500, thickness: 120, quantity: 40000, family: "Non défini", quality: "Non défini"},
+                {supplier: "Non défini",ref: "PFI_00200", length: 600, width: 500, thickness: 100, quantity: 40000, family: "Non défini", quality: "Non défini"},
+                {supplier: "Non défini",ref: "PFI_00300", length: 600, width: 500, thickness: 75, quantity: 40000, family: "Non défini", quality: "Non défini"}
             ];
+            console.log("Données d'exemple chargées : ", stockData);
             originalStockQuantities={};
             stockAvailability = {};
                 stockData.forEach(item => {
@@ -57,6 +58,12 @@
             updateFilters();
             updateStockDisplay();
             showStatus('success', '✅ Exemple chargé avec ' + stockData.length + ' casiers !');
+        }
+        function logStockData() {
+            console.log("Current Stock Data:");
+            stockData.forEach((item, index) => {
+            console.log(`Item ${index}:`, item);
+            });
         }
 
         function clearStock() {
@@ -76,11 +83,11 @@
             status.className = 'alert alert-' + type;
             status.textContent = message;
             
-            // Disparition automatique après 3 secondes
+            // Disparition automatique après 5 secondes
             if (type === 'success') {
                 setTimeout(() => {
                     status.style.display = 'none';
-                }, 3000);
+                }, 5000);
             }
         }
 
@@ -121,15 +128,16 @@
                 const qualityMatch = !qualityFilter || item.quality === qualityFilter;
                 return familyMatch && qualityMatch;
             });
-
-            const targetThickness = Number(document.getElementById('targetThickness').value);
-
-            // Calculate scores for all items and sort by score
+            
+            // Calculer les scores pour tous les items et les classer par score 
             filtered.forEach(item => {
                 item.currentScore = calculateBlockScore(item);
             });
 
             filtered.sort((a, b) => (b.currentScore || 0) - (a.currentScore || 0));
+
+            console.log(`🔍 Stock filtré: ${filtered.length} blocs disponibles`);
+            console.log('Premiers blocs:', filtered.slice(0, 3).map(b => `${b.ref}: ${b.length}×${b.width}×${b.thickness}mm, stock=${b.quantity}`));
 
             return filtered;
         }
@@ -153,7 +161,7 @@
     const score = item.currentScore || 0;
     const scoreColor = score >= 80 ? '#27ae60' : score >= 50 ? '#f39c12' : '#e74c3c';
     
-    // CORRECTION : Les quantités ne changent jamais à cause du filtre d'épaisseur
+    // Les quantités ne changent jamais à cause du filtre d'épaisseur
     const originalQty = item.quantity || 0;  // Stock initial du fichier Excel
     
     // Stock courant (peut avoir changé après optimisations)
@@ -161,8 +169,8 @@
     if (stockAvailability && stockAvailability[item.ref] !== undefined) {
         currentQty = stockAvailability[item.ref];
     }
-    
-    // DEBUG pour identifier le problème
+     
+    // DEBUG pour identifier le problème avec les épaisseurs
     if (!isCompatible && originalQty > 0) {
         console.log(`🔍 Bloc ${item.ref} non compatible (épaisseur ${item.thickness}mm < ${targetThickness}mm) mais stock=${originalQty}`);
     }
@@ -179,10 +187,11 @@
     const rowStyle = !isCompatible ? 'opacity: 0.6; background-color: #f8f9fa;' : '';
     
     html += `<tr class="${rowClass}" style="${rowStyle}">
-        <td style="font-weight: 600; color: #2980b9;">${item.ref}</td>
         <td style="font-size: 0.8rem; color: #666;">${item.family || '-'}</td>
+        <td style="font-weight: 600; color: #2980b9;">${item.ref}</td>
         <td style="font-size: 0.8rem; color: #666;">${item.quality || '-'}</td>
         <td style="font-size: 0.8rem; color: #666;">${item.supplier || '-'}</td>
+        <td style="font-size: 0.8rem; color: #666;">${item.designation || '-'}</td>
         <td>${item.length} mm</td>
         <td>${item.width} mm</td>
         <td style="color: ${isCompatible ? '#27ae60' : '#e74c3c'};">${item.thickness} mm</td>
@@ -278,7 +287,7 @@ if (thicknessMismatch.length > 0) {
             progressFill.style.width = '0%';
 
             try {
-                // Simulate progress updates
+                // Simuler l'avancement 
                 const progressSteps = [20, 40, 60, 80, 100];
                 for (let i = 0; i < progressSteps.length; i++) {
                     await new Promise(resolve => setTimeout(resolve, 200));
@@ -298,7 +307,7 @@ if (thicknessMismatch.length > 0) {
                     numRows, 
                     Number(document.getElementById('jointOffset').value) || 50
                 );
-                const result = wallBuilder.buildWall(available);
+                const result = wallBuilder.buildWallWithPreparedStock(available);
                 wallBuilder.updateGlobalStock();
                 lastOptimizationResult = result;
                 displayResults(result);
@@ -326,110 +335,186 @@ class WallBuilder {
     console.log(`📏 Hauteur de base: ${this.baseRowHeight}mm (min: ${this.baseRowHeight * this.minRowHeightRatio}mm)`);
 }
 
-    // Méthode principale qui remplacera optimizeWithJointConstraints
-    buildWall(stockData) {
-        console.log('🔄 Début construction du mur...');
-        
-        // Initialiser le stock local pour l'optimisation
-        this.initializeLocalStock(stockData);
-        
-
-        // NOUVEAU : Optimiser la stratégie de rangées
-    const strategy = this.optimizeRowStrategy();
-    
-    // Utiliser la stratégie optimisée
-    const actualTargetRows = strategy.rows;
-    const optimizedRowHeight = strategy.rowHeight;
-    
-    console.log(`🎯 Stratégie appliquée: ${actualTargetRows} rangées (au lieu de ${this.numRows})`);
-    
-    let currentY = 0;
-    let actualRowCount = 0;
-    let previousJoints = [];
-    const maxRows = actualTargetRows + 5; // 5 rangées de sécurité en plus
-
-        while (currentY < this.target.y && actualRowCount < maxRows) {
-            console.log(`\n📋 Construction rangée ${actualRowCount + 1} à Y=${currentY}`);
-            
-            const remainingHeight = this.target.y - currentY;
-            const targetRowHeight = Math.min(optimizedRowHeight, remainingHeight);
-            const minRowHeight = targetRowHeight * this.minRowHeightRatio;
-            
-            console.log(`🎯 Hauteur cible: ${targetRowHeight}mm, minimum: ${minRowHeight}mm`);
-            
-            const rowBlocks = this.buildRow(
-                currentY,
-                targetRowHeight,
-                minRowHeight,
-                previousJoints,
-                actualRowCount + 1,
-                remainingHeight
-            );
-            
-            if (rowBlocks.length === 0) {
-                console.log('❌ Impossible de construire cette rangée');
-                break;
-            }
-            
-            // Calculer la hauteur réelle de la rangée
-            const actualRowHeight = Math.max(...rowBlocks.map(b => b.height));
-            console.log(`✅ Rangée ${actualRowCount + 1} terminée: ${rowBlocks.length} blocs, hauteur ${actualRowHeight}mm`);
-            
-            this.solution.push(...rowBlocks);
-            
-            // Calculer les nouvelles jointures
-            const newJoints = this.calculateRowJoints(rowBlocks);
-            
-            currentY += actualRowHeight;
-            actualRowCount++;
-            previousJoints = newJoints;
-        }
-
-        return this.createResult(actualRowCount);
+    // Méthode principale
+buildWallWithPreparedStock(stockData) {
+    console.log('🔄 Nouveau algorithme avec stock préparé...');
+    console.log(`📊 Stock reçu: ${stockData.length} types de blocs`);
+    //Vérifier le contenu du stock reçu
+       if (stockData.length === 0) {
+        throw new Error('Stock vide reçu par notre algorithme !');
     }
+    console.log('Premiers blocs reçus:');
+    stockData.slice(0, 3).forEach(block => {
+        console.log(`  ${block.ref}: ${block.length}×${block.width}×${block.thickness}mm, quantity=${block.quantity}`);
+    });
+    
+    // ÉTAPE 1 : Préparer le stock avec permutations validées
+    const preparedStock = this.prepareAvailableStock(stockData);
+    console.log(`📦 Stock préparé: ${preparedStock.length} permutations valides`);
+    
+    // ÉTAPE 2 : Déterminer la hauteur optimale de rangée
+    const rowStrategy = this.determineOptimalRowHeight(preparedStock);
+    console.log(`🎯 Stratégie: ${rowStrategy.numRows} rangées de ${rowStrategy.rowHeight}mm chacune`);
+    
+    // ÉTAPE 3 : Filtrer le stock pour cette hauteur de rangée
+    const filteredStock = this.filterStockForRowHeight(preparedStock, rowStrategy.rowHeight);
+    console.log(`🔍 Stock filtré: ${filteredStock.length} blocs utilisables pour hauteur ${rowStrategy.rowHeight}mm`);
+    
+    // ÉTAPE 4 : Construire le mur rangée par rangée
+    return this.buildWallWithFilteredStock(filteredStock, rowStrategy);
+}
     // Générer toutes les permutations possibles d'un bloc (rotation complète des 3 dimensions)
-generateBlockPermutations(block) {
+// Générer toutes les permutations possibles avec épaisseur EXACTE
+
+// Préparer tous les blocs avec leurs permutations valides
+prepareAvailableStock(stockData) {
+    const preparedStock = [];
+    
+    stockData.forEach(block => {
+        const quantity = block.quantity || 0;
+        if (quantity <= 0) return;
+        
+        console.log(`🔍 Traitement bloc ${block.ref}: ${block.length}×${block.width}×${block.thickness}`);
+        
+        // Générer toutes les permutations possibles
+        const allPermutations = this.generateAllPermutationsForBlock(block);
+        
+        // Filtrer les permutations avec épaisseur >= cible
+        const validPermutations = allPermutations.filter(perm => 
+            perm.finalThickness >= this.target.thickness
+        );
+        
+        console.log(`  ${validPermutations.length}/${allPermutations.length} permutations valides`);
+        
+        // Ajouter chaque permutation valide au stock préparé
+        validPermutations.forEach(perm => {
+            preparedStock.push({
+                ...perm,
+                originalRef: block.ref,
+                availableQuantity: quantity,
+                family: block.family,
+                quality: block.quality,
+                supplier: block.supplier
+            });
+        });
+    });
+    
+    return preparedStock;
+}
+
+// Générer toutes les permutations d'un bloc
+generateAllPermutationsForBlock(block) {
     const permutations = [];
     const dimensions = [block.length, block.width, block.thickness];
     
-    // Générer toutes les permutations possibles des 3 dimensions
-    const allOrientations = [
-        // Format: [longueur, largeur, épaisseur]
-        [dimensions[0], dimensions[1], dimensions[2]], // L×l×É (normal)
-        [dimensions[0], dimensions[2], dimensions[1]], // L×É×l (épaisseur et largeur échangées)
-        [dimensions[1], dimensions[0], dimensions[2]], // l×L×É (longueur et largeur échangées)
-        [dimensions[1], dimensions[2], dimensions[0]], // l×É×L (rotation complète)
-        [dimensions[2], dimensions[0], dimensions[1]], // É×L×l (rotation complète)
-        [dimensions[2], dimensions[1], dimensions[0]]  // É×l×L (rotation complète)
+    // Toutes les permutations possibles (6 orientations)
+    const orientations = [
+        { length: dimensions[0], width: dimensions[1], thickness: dimensions[2], name: 'L×l×É' }, // Original
+        { length: dimensions[0], width: dimensions[2], thickness: dimensions[1], name: 'L×É×l' },
+        { length: dimensions[1], width: dimensions[0], thickness: dimensions[2], name: 'l×L×É' },
+        { length: dimensions[1], width: dimensions[2], thickness: dimensions[0], name: 'l×É×L' },
+        { length: dimensions[2], width: dimensions[0], thickness: dimensions[1], name: 'É×L×l' },
+        { length: dimensions[2], width: dimensions[1], thickness: dimensions[0], name: 'É×l×L' }
     ];
     
-    allOrientations.forEach((orientation, index) => {
-        const [newLength, newWidth, newThickness] = orientation;
+    orientations.forEach((orientation, index) => {
+        permutations.push({
+            originalLength: block.length,
+            originalWidth: block.width,
+            originalThickness: block.thickness,
+            // Dimensions dans cette orientation
+            permLength: orientation.length, // Largeur utilisable dans le mur
+            permWidth: orientation.width,  // Hauteur de rangée potentielle  
+            permThickness: orientation.thickness, // Épaisseur finale
+            // Épaisseur finale (avec découpe si nécessaire)
+            finalThickness: Math.min(orientation.thickness, this.target.thickness),
+            orientationIndex: index,
+            orientationName: orientation.name,
+            needsThicknessCut: orientation.thickness > this.target.thickness
+        });
+    });
+    
+    return permutations;
+}
+// Filtrer le stock pour une hauteur de rangée spécifique
+filterStockForRowHeight(preparedStock, targetRowHeight) {
+    console.log(`🔍 Filtrage pour hauteur de rangée: ${targetRowHeight}mm`);
+    
+    const filtered = preparedStock.filter(perm => {
+        //  CORRECTION : Accepter les blocs avec largeur >= hauteur cible (pour découpe)
+        const heightMatch = perm.permWidth >= targetRowHeight;
         
-        // Vérifier si cette orientation donne la bonne épaisseur pour le mur
-        if (newThickness >= this.target.thickness) {
-            permutations.push({
-                ...block,
-                useLength: newLength,
-                useWidth: newWidth,
-                useThickness: newThickness,
-                rotated: index > 0, // Toute orientation autre que la première est une rotation
-                thicknessCut: newThickness > this.target.thickness,
-                orientation: `rotation_${index}`,
-                coverageArea: newLength * newWidth,
-                maxDimension: Math.max(newLength, newWidth),
-                minDimension: Math.min(newLength, newWidth)
+        if (heightMatch) {
+            console.log(`✅ ${perm.originalRef} (${perm.orientationName}): ${perm.permLength}×${perm.permWidth}×${perm.finalThickness}mm (largeur ${perm.permWidth} >= ${targetRowHeight})`);
+        } else {
+            console.log(`❌ ${perm.originalRef} (${perm.orientationName}): ${perm.permLength}×${perm.permWidth}×${perm.finalThickness}mm (largeur ${perm.permWidth} < ${targetRowHeight})`);
+        }
+        
+        return heightMatch;
+    });
+    
+    console.log(`🔍 Stock filtré: ${filtered.length} blocs pour hauteur ${targetRowHeight}mm`);
+    
+    if (filtered.length === 0) {
+        console.error(`❌ ERREUR: Aucun bloc disponible pour hauteur ${targetRowHeight}mm !`);
+        console.log('Blocs disponibles avec leurs largeurs:');
+        preparedStock.forEach(perm => {
+            console.log(`  ${perm.originalRef}: ${perm.permLength}×${perm.permWidth}×${perm.finalThickness}mm`);
+        });
+    }
+    
+    return filtered;
+}
+// Déterminer la hauteur de rangée optimale - CORRIGÉ
+determineOptimalRowHeight(preparedStock) {
+    // Extraire toutes les largeurs possibles (qui deviennent hauteurs de rangée)
+    const possibleHeights = new Set();
+    preparedStock.forEach(perm => {
+        possibleHeights.add(perm.permWidth); // La largeur devient hauteur de rangée
+    });
+    
+    //  NE PAS ajouter la hauteur théorique qui crée l'hallucination
+    // possibleHeights.add(Math.floor(this.target.y / this.numRows)); //  SUPPRIMÉ
+    
+    console.log(`🎯 Hauteurs possibles: ${Array.from(possibleHeights).sort((a,b) => b-a).join(', ')}mm`);
+    
+    // Tester chaque hauteur possible
+    const strategies = [];
+    possibleHeights.forEach(height => {
+        const numRows = Math.floor(this.target.y / height);
+        const actualHeight = this.target.y / numRows; // Hauteur exacte pour couvrir parfaitement
+        
+        // Vérifier si le nombre de rangées est acceptable
+        if (numRows >= this.numRows && numRows <= this.numRows + 5) {
+            strategies.push({
+                rowHeight: height,
+                actualRowHeight: actualHeight,
+                numRows: numRows,
+                coverage: (numRows * height) / this.target.y,
+                //  NOUVEAU SCORE : Privilégier 4 rangées au lieu de 3
+                score: Math.abs(numRows - (this.numRows + 1)) // +1 pour favoriser une rangée de plus
             });
+            
+            console.log(`  ${height}mm → ${numRows} rangées (${actualHeight.toFixed(1)}mm chacune) - Score: ${Math.abs(numRows - (this.numRows + 1))}`);
+        } else {
+            console.log(`  ${height}mm → ${numRows} rangées ❌ (hors limites ${this.numRows}-${this.numRows + 5})`);
         }
     });
     
-    console.log(`🔄 Bloc ${block.ref} (${block.length}×${block.width}×${block.thickness}): ${permutations.length} orientations possibles`);
-    return permutations;
+    if (strategies.length === 0) {
+        throw new Error('Aucune stratégie de rangée valide trouvée');
+    }
+    
+    // Choisir la meilleure stratégie (maintenant favorise par exemple 4 rangées si couverture complète)
+    strategies.sort((a, b) => a.score - b.score);
+    const bestStrategy = strategies[0];
+    
+    console.log(`🏆 Stratégie choisie: ${bestStrategy.numRows} rangées de ${bestStrategy.actualRowHeight.toFixed(1)}mm`);
+    return bestStrategy;
 }
-
-    // Initialiser le stock local (copie de stockAvailability)
+    // Initialiser le stock local
 initializeLocalStock(stockData) {
-    this.filteredStockData = stockData; // NOUVEAU : stocker les blocs filtrés
+    this.filteredStockData = stockData; // Stocker les blocs filtrés
     this.currentStockAvailability = {};
     originalStockQuantities = {};
     stockAvailability = {};
@@ -462,13 +547,11 @@ initializeLocalStock(stockData) {
         return joints;
     }
     // Optimiser le nombre de rangées pour minimiser l'utilisation des casiers
-optimizeRowStrategy() {
-    const availableBlocks = this.getAvailableBlocks();
-    const totalAvailablePieces = Object.values(this.currentStockAvailability).reduce((sum, qty) => sum + qty, 0);
+optimizeRowStrategy(availableBlocks) {
+    const totalAvailablePieces = availableBlocks.reduce((sum, block) => sum + block.quantity, 0);
     
     console.log(`🎯 Optimisation stratégique: ${totalAvailablePieces} casiers disponibles`);
     
-    // Calculer différentes stratégies de rangées
     const strategies = [];
     
     for (let extraRows = 0; extraRows <= this.maxExtraRows; extraRows++) {
@@ -476,41 +559,37 @@ optimizeRowStrategy() {
         const testRowHeight = this.target.y / testRows;
         const testMinHeight = testRowHeight * this.minRowHeightRatio;
         
-        // Estimer combien de casiers seraient nécessaires avec cette stratégie
-        const estimatedCasiers = this.estimateCasiersNeeded(testRows, testRowHeight, testMinHeight);
+        // CORRECTION : Passer availableBlocks à estimateCasiersNeeded
+        const estimatedCasiers = this.estimateCasiersNeeded(testRows, testRowHeight, testMinHeight, availableBlocks);
         
         strategies.push({
             rows: testRows,
             rowHeight: testRowHeight,
             minHeight: testMinHeight,
             estimatedCasiers: estimatedCasiers,
-            efficiency: estimatedCasiers > 0 ? (this.target.x * this.target.y) / (estimatedCasiers * 1000000) : 0 // Estimation grossière
+            efficiency: estimatedCasiers > 0 ? (this.target.x * this.target.y) / (estimatedCasiers * 1000000) : 0
         });
         
         console.log(`📊 Stratégie ${testRows} rangées: ~${estimatedCasiers} casiers estimés`);
     }
     
-    // Choisir la stratégie qui minimise l'utilisation des casiers
     strategies.sort((a, b) => a.estimatedCasiers - b.estimatedCasiers);
     const bestStrategy = strategies[0];
     
-    console.log(`🏆 Stratégie choisie: ${bestStrategy.rows} rangées (hauteur: ${bestStrategy.rowHeight.toFixed(0)}mm)`);
-    
+    console.log(`🏆 Stratégie choisie: ${bestStrategy.rows} rangées`);
     return bestStrategy;
 }
 
-// Estimer le nombre de casiers nécessaires pour une stratégie donnée
-estimateCasiersNeeded(numRows, rowHeight, minHeight) {
-    const availableBlocks = this.getAvailableBlocks();
+// Estimer le nombre de casiers
+estimateCasiersNeeded(numRows, rowHeight, minHeight, availableBlocks) {
     let estimatedTotal = 0;
     
     for (let row = 0; row < numRows; row++) {
-        // Pour chaque rangée, estimer combien de casiers seraient nécessaires
         let remainingX = this.target.x;
         let rowCasiers = 0;
         
-        while (remainingX > 100 && rowCasiers < 20) { // Limite sécurité
-            // Trouver un bloc typique pour cette hauteur
+        while (remainingX > 100 && rowCasiers < 20) {
+            // CORRECTION : Utiliser availableBlocks passé en paramètre
             const suitableBlock = availableBlocks.find(block => {
                 const orientations = [
                     { width: block.length, height: block.width },
@@ -521,7 +600,6 @@ estimateCasiersNeeded(numRows, rowHeight, minHeight) {
             
             if (!suitableBlock) break;
             
-            // Estimer la largeur utilisée
             const avgWidth = Math.min(suitableBlock.length, suitableBlock.width, remainingX);
             remainingX -= avgWidth;
             rowCasiers++;
@@ -569,7 +647,318 @@ createResult(actualRowCount) {
     console.log('🎉 Construction terminée:', result);
     return result;
 }
+// Construire le mur
+buildWallWithFilteredStock(filteredStock, rowStrategy) {
+    this.solution = [];
+    this.currentFilteredStock = filteredStock; 
+    this.currentStockQuantities = {}; 
+    let previousJoints = [];
+    
+    // Initialiser les quantités
+    filteredStock.forEach(perm => {
+        if (!this.currentStockQuantities[perm.originalRef]) {
+            this.currentStockQuantities[perm.originalRef] = perm.availableQuantity;
+        }
+    });
+    
+    // Construire chaque rangée
+    for (let row = 0; row < rowStrategy.numRows; row++) {
+        const rowY = row * rowStrategy.actualRowHeight;
+        console.log(`\n📋 Construction rangée ${row + 1} à Y=${rowY.toFixed(1)}`);
+        
+        const rowResult = this.buildSimpleRow(
+            filteredStock, 
+            this.currentStockQuantities, 
+            rowY, 
+            rowStrategy.actualRowHeight, 
+            row + 1,
+            previousJoints
+        );
+        
+        this.solution.push(...rowResult.blocks);
+        previousJoints = rowResult.joints;
+    }
+    
+    return this.createResult(rowStrategy.numRows);
+}
 
+// Construire une rangée simple en utilisant l'ancien système qui marchait
+buildSimpleRow(availableStock, stockQuantities, rowY, rowHeight, rowNumber, previousJoints = []) {
+    const rowBlocks = [];
+    let currentX = 0;
+    
+    console.log(`📋 Rangée ${rowNumber}: jointures interdites à X = [${previousJoints.join(', ')}]`);
+    
+    while (currentX < this.target.x) {
+        const remainingX = this.target.x - currentX;
+        
+        //  UTILISER L'ANCIENNE MÉTHODE QUI MARCHAIT
+        const bestBlock = this.findBestBlockForFixedHeight(
+            remainingX, 
+            rowHeight,  // Hauteur fixe de la rangée
+            currentX, 
+            previousJoints
+        );
+        
+        if (!bestBlock) {
+            console.log(`❌ Aucun bloc trouvé pour X=${currentX} avec hauteur ${rowHeight}mm`);
+            break;
+        }
+        
+        //  UTILISER L'ANCIEN PLACEMENT QUI MARCHAIT
+        const placedBlock = this.placeBlockWithFixedHeight(
+            bestBlock, 
+            currentX, 
+            rowY, 
+            remainingX, 
+            rowHeight, // Hauteur fixe
+            rowNumber
+        );
+        
+        console.log(`✅ Bloc ${placedBlock.ref} placé: ${placedBlock.width}×${placedBlock.height}×${placedBlock.thickness}mm`);
+        
+        rowBlocks.push(placedBlock);
+        currentX += placedBlock.width;
+        
+        // Décrémenter le stock dans le nouveau système
+        stockQuantities[bestBlock.ref]--;
+    }
+    
+    // Calculer les jointures de cette rangée (ancienne méthode)
+    const currentJoints = this.calculateRowJoints(rowBlocks);
+    console.log(`🔗 Jointures créées: [${currentJoints.join(', ')}]`);
+    
+    return { blocks: rowBlocks, joints: currentJoints };
+}
+// Trouver le meilleur bloc en évitant les violations de jointures
+findBestBlockWithJoints(availableStock, stockQuantities, maxWidth, currentX, forbiddenJoints) {
+    let bestBlock = null;
+    let bestScore = -1;
+    
+    // CORRECTION : S'assurer que forbiddenJoints est un tableau
+    const safeJoints = Array.isArray(forbiddenJoints) ? forbiddenJoints : [];
+    
+    console.log(`  🔍 Recherche bloc à X=${currentX}, jointures interdites: [${safeJoints.join(', ')}]`);
+    
+    // Parcourir tous les blocs disponibles
+    for (const block of availableStock) {
+        // Vérifier si le bloc est encore en stock
+        if (stockQuantities[block.originalRef] <= 0) continue;
+        
+        // Tester différentes largeurs possibles
+        const possibleWidths = this.calculatePossibleWidths(block.permLength, maxWidth);
+        
+        for (const width of possibleWidths) {
+            const jointPosition = currentX + width;
+            const violatesJoints = this.violatesJointConstraint(jointPosition, safeJoints);
+            
+            // Si ça viole les jointures, ignorer cette option
+            if (violatesJoints) continue;
+            
+            // Calculer le score
+            const coverageScore = (width / maxWidth) * 50;
+            const sizeBonus = Math.min(width / 100, 25);
+            const noCutBonus = (block.permLength <= width) ? 20 : 0;
+            const thicknessPenalty = block.needsThicknessCut ? -5 : 0;
+            
+            const score = coverageScore + sizeBonus + noCutBonus + thicknessPenalty;
+            
+            if (score > bestScore) {
+                bestScore = score;
+                bestBlock = {
+                    ...block,
+                    useWidth: width,
+                    score: score,
+                    violatesJoints: false
+                };
+            }
+        }
+    }
+    
+    if (bestBlock) {
+        console.log(`  🏆 Choix sans violation: ${bestBlock.originalRef} - ${bestBlock.useWidth}mm`);
+    } else {
+        console.log(`  ❌ Aucun bloc sans violation trouvé`);
+    }
+    
+    return bestBlock;
+}
+// Calculer les largeurs possibles pour un bloc
+calculatePossibleWidths(blockMaxWidth, maxWidth) {
+    const widths = [];
+    
+    // Option 1: Bloc entier
+    if (blockMaxWidth <= maxWidth) {
+        widths.push(blockMaxWidth);
+    }
+    
+    // Option 2: Largeur maximum disponible
+    if (maxWidth < blockMaxWidth && maxWidth >= 200) {
+        widths.push(maxWidth);
+    }
+    
+    // Option 3: Largeurs standards pour éviter les jointures
+    const standardWidths = [600, 500, 400, 300, 250, 200];
+    for (const width of standardWidths) {
+        if (width <= Math.min(blockMaxWidth, maxWidth) && width >= 200) {
+            widths.push(width);
+        }
+    }
+    
+    // Retourner les largeurs uniques, triées par ordre décroissant
+    return [...new Set(widths)].sort((a, b) => b - a);
+}
+// Vérifier si une position viole les contraintes de jointures - CORRIGÉ
+violatesJointConstraint(jointPosition, forbiddenJoints) {
+    if (jointPosition >= this.target.x) return false; // Fin du mur
+    
+    //  CORRECTION : Vérifier que forbiddenJoints est un tableau
+    if (!forbiddenJoints || !Array.isArray(forbiddenJoints) || forbiddenJoints.length === 0) {
+        return false; // Pas de contraintes
+    }
+    
+    const minOffset = this.jointOffset || 50; // Décalage minimum (défaut 50mm)
+    
+    for (const forbiddenX of forbiddenJoints) {
+        const distance = Math.abs(jointPosition - forbiddenX);
+        if (distance < minOffset) {
+            return true;
+        }
+    }
+    return false;
+}
+// Calculer les jointures d'une rangée
+calculateRowJoints(rowBlocks) {
+    const joints = [];
+    let x = 0;
+    
+    for (const block of rowBlocks) {
+        x += block.width;
+        if (x < this.target.x) { // Pas de jointure à la fin du mur
+            joints.push(x);
+        }
+    }
+    
+    return joints;
+}
+// Placer un bloc avec gestion des jointures - CORRIGÉ
+placeSimpleBlockWithJoints(bestBlock, x, y, maxWidth, rowHeight, rowNumber, previousJoints) {
+    const block = this.placeSimpleBlock(bestBlock, x, y, maxWidth, rowHeight, rowNumber);
+    
+    //  CORRECTION : S'assurer que previousJoints est un tableau
+    const safeJoints = Array.isArray(previousJoints) ? previousJoints : [];
+    
+    // Vérifier les violations de jointures
+    const jointPosition = x + block.width;
+    block.violatesJoints = this.violatesJointConstraint(jointPosition, safeJoints);
+    
+    return block;
+}
+
+// Trouver le meilleur bloc disponible dans le stock filtré
+findBestBlockFromStock(availableStock, stockQuantities, maxWidth, currentX) {
+    let bestBlock = null;
+    let bestScore = -1;
+    
+    // Parcourir tous les blocs disponibles
+    for (const block of availableStock) {
+        // Vérifier si le bloc est encore en stock
+        if (stockQuantities[block.originalRef] <= 0) continue;
+        
+        // La largeur utilisable est la longueur de la permutation
+        const useWidth = Math.min(block.permLength, maxWidth);
+        if (useWidth < 50) continue; // Minimum 50mm utile
+        
+        // Calculer le score (privilégier les blocs qui couvrent le plus)
+        const coverageScore = (useWidth / maxWidth) * 50; // 50% pour la couverture
+        const sizeBonus = Math.min(useWidth / 100, 25); // 25% bonus taille
+        const noCutBonus = (block.permLength <= maxWidth) ? 20 : 0; // 20% si pas de découpe
+        const thicknessPenalty = block.needsThicknessCut ? -5 : 0; // -5% si découpe épaisseur
+        
+        const score = coverageScore + sizeBonus + noCutBonus + thicknessPenalty;
+        
+        console.log(`  📦 ${block.originalRef} (${block.orientationName}): ${useWidth}mm → score ${score.toFixed(1)}`);
+        
+        if (score > bestScore) {
+            bestScore = score;
+            bestBlock = {
+                ...block,
+                useWidth: useWidth,
+                score: score
+            };
+        }
+    }
+    
+    if (bestBlock) {
+        console.log(`🏆 Choix: ${bestBlock.originalRef} (${bestBlock.orientationName}) - ${bestBlock.useWidth}mm`);
+    }
+    
+    return bestBlock;
+}
+// Placer un bloc de manière simple - AVEC GESTION JOINTURES
+placeSimpleBlock(bestBlock, x, y, maxWidth, rowHeight, rowNumber) {
+    const useWidth = Math.min(bestBlock.useWidth, maxWidth);
+    const useHeight = rowHeight; // Hauteur fixe de la rangée
+    const useThickness = bestBlock.finalThickness; // Épaisseur déjà calculée
+    
+    //  VÉRIFICATION : Pas d'hallucination
+    if (useWidth > bestBlock.originalLength && useWidth > bestBlock.originalWidth) {
+        console.error(`❌ HALLUCINATION DÉTECTÉE: ${bestBlock.originalRef} ne peut pas faire ${useWidth}mm de large !`);
+        console.error(`   Dimensions originales: ${bestBlock.originalLength}×${bestBlock.originalWidth}×${bestBlock.originalThickness}mm`);
+        console.error(`   Permutation: ${bestBlock.permLength}×${bestBlock.permWidth}×${bestBlock.permThickness}mm`);
+    }
+    
+    // Calculer les découpes nécessaires
+    let cuts = 0;
+    const cutDetails = [];
+    
+    // Découpe en largeur si nécessaire
+    if (bestBlock.permLength > useWidth) {
+        cuts++;
+        cutDetails.push(`Largeur: ${bestBlock.permLength}→${useWidth}mm`);
+    }
+    
+    // Découpe en hauteur (normalement pas nécessaire car pré-filtré)
+    if (bestBlock.permWidth > useHeight) {
+        cuts++;
+        cutDetails.push(`Hauteur: ${bestBlock.permWidth}→${useHeight}mm`);
+    }
+    
+    // Découpe en épaisseur si nécessaire
+    if (bestBlock.needsThicknessCut) {
+        cuts++;
+        cutDetails.push(`Épaisseur: ${bestBlock.permThickness}→${this.target.thickness}mm`);
+    }
+    
+    // Calculer le volume de chute
+    const originalVolume = bestBlock.originalLength * bestBlock.originalWidth * bestBlock.originalThickness;
+    const usedVolume = useWidth * useHeight * useThickness;
+    const wasteVolume = originalVolume - usedVolume;
+    
+    return {
+        ref: bestBlock.originalRef,
+        family: bestBlock.family || 'N/A',
+        quality: bestBlock.quality || 'N/A',
+        supplier: bestBlock.supplier || 'N/A',
+        x: x,
+        y: y,
+        width: useWidth,
+        height: useHeight,
+        thickness: useThickness,
+        // Dimensions originales du casier
+        originalLength: bestBlock.originalLength,
+        originalWidth: bestBlock.originalWidth,
+        originalThickness: bestBlock.originalThickness,
+        // Informations sur la permutation utilisée
+        permutationUsed: bestBlock.orientationName,
+        rotated: bestBlock.orientationIndex > 0,
+        cuts: cuts,
+        cutDetails: cutDetails,
+        wasteVolume: wasteVolume,
+        row: rowNumber,
+        violatesJoints: false //  À implémenter correctement plus tard
+    };
+}
     // Construire une rangée complète avec hauteur UNIFORME
 buildRow(currentY, targetHeight, minHeight, previousJoints, rowNumber, remainingWallHeight) {
     let currentX = 0;
@@ -624,7 +1013,7 @@ buildRow(currentY, targetHeight, minHeight, previousJoints, rowNumber, remaining
             currentX, 
             currentY, 
             remainingX, 
-            uniformRowHeight, // ⚠️ Hauteur FIXE
+            uniformRowHeight, //  Hauteur FIXE
             rowNumber
         );
 
@@ -647,50 +1036,36 @@ buildRow(currentY, targetHeight, minHeight, previousJoints, rowNumber, remaining
 
     return rowBlocks;
 }
-// Trouver le meilleur bloc en utilisant TOUTES les permutations possibles
+// Adapter l'ancienne méthode pour gérer les découpes en hauteur
 findBestBlockForFixedHeight(maxWidth, requiredHeight, currentX, forbiddenJoints) {
-
-    const availableBlocks = this.getAvailableBlocks();
-const allPermutations = [];
-availableBlocks.forEach(block => {
-    const blockPermutations = this.generateBlockPermutations(block);
-    allPermutations.push(...blockPermutations);
-});
-
-// Trier par potentiel de couverture
-allPermutations.sort((a, b) => {
-    // 1. Priorité aux blocs avec GRANDE largeur (pour couvrir plus de distance X)
-    const aWidth = a.useLength;
-    const bWidth = b.useLength;
-    if (Math.abs(aWidth - bWidth) > 50) { // Différence significative
-        return bWidth - aWidth; // Plus large d'abord
-    }
-    
-    // 2. Si largeurs similaires, priorité à la surface
-    return b.coverageArea - a.coverageArea;
-});
+    const availableStock = this.getCurrentFilteredStock();
     let bestBlock = null;
     let bestScore = -1;
-
-    console.log(`🔍 Recherche parmi ${allPermutations.length} permutations pour X=${currentX}, H=${requiredHeight}mm, L_max=${maxWidth}mm`);
-
-    // STRATÉGIE 1 : Chercher d'abord des solutions sans violations
+    
+    console.log(`🔍 Recherche parmi ${availableStock.length} blocs pour X=${currentX}, H=${requiredHeight}mm, L_max=${maxWidth}mm`);
+    
+    // STRATÉGIE : Chercher d'abord sans violations, puis avec
     for (let allowViolations = false; allowViolations <= true; allowViolations++) {
-        console.log(allowViolations ? '⚠️ Phase 2: accepter violations' : '✅ Phase 1: éviter violations');
+        console.log(allowViolations ? ' Phase 2: accepter violations' : '✅ Phase 1: éviter violations');
         
-        for (const permutation of allPermutations) {
-            // Vérifier si cette permutation peut convenir en hauteur
-            if (permutation.useWidth < requiredHeight * this.minRowHeightRatio) continue;
+        for (const stockBlock of availableStock) {
+            // Vérifier si ce bloc a encore du stock
+            if (this.currentStockQuantities[stockBlock.originalRef] <= 0) continue;
             
-            // Calculer les largeurs possibles pour cette permutation
-            const possibleWidths = this.calculatePossibleWidthsForPermutation(
-                permutation, 
+            //  CORRECTION : Accepter les blocs avec largeur >= hauteur requise
+            if (stockBlock.permWidth < requiredHeight) continue;
+            
+            console.log(`  📦 Bloc ${stockBlock.originalRef}: ${stockBlock.permLength}×${stockBlock.permWidth}×${stockBlock.finalThickness}mm`);
+            
+            // Calculer les largeurs possibles
+            const possibleWidths = this.calculatePossibleWidthsForStock(
+                stockBlock, 
                 maxWidth, 
                 currentX, 
                 forbiddenJoints, 
                 allowViolations
             );
-
+            
             for (const widthOption of possibleWidths) {
                 const jointPosition = currentX + widthOption.width;
                 const violatesJoints = this.violatesJointConstraint(jointPosition, forbiddenJoints);
@@ -698,25 +1073,26 @@ allPermutations.sort((a, b) => {
                 // Si on est en phase 1, ignorer les violations
                 if (!allowViolations && violatesJoints) continue;
                 
-                const score = this.calculatePermutationScore(
-                    permutation, 
+                const score = this.calculateStockBlockScore(
+                    stockBlock, 
                     widthOption, 
                     maxWidth, 
                     requiredHeight, 
                     violatesJoints
                 );
-
-                console.log(`📦 ${permutation.ref} (${permutation.orientation}): ${widthOption.width}×${requiredHeight}mm → score ${score.toFixed(1)} ${violatesJoints ? '⚠️' : '✅'}`);
-
+                
+                console.log(`    ${stockBlock.originalRef}: ${widthOption.width}×${requiredHeight}mm → score ${score.toFixed(1)} ${violatesJoints ? '⚠️' : '✅'}`);
+                
                 if (score > bestScore) {
                     bestScore = score;
                     bestBlock = { 
-                        ...permutation, 
+                        ...stockBlock,
                         useWidth: widthOption.width,
-                        useHeight: Math.min(permutation.useWidth, requiredHeight), // Découpe hauteur si nécessaire
+                        useHeight: requiredHeight, // ⚠️ Hauteur exacte requise (avec découpe si nécessaire)
                         violatesJoints: violatesJoints,
                         widthStrategy: widthOption.strategy,
-                        finalScore: score
+                        finalScore: score,
+                        needsHeightCut: stockBlock.permWidth > requiredHeight // ⚠️ NOUVEAU : flag pour découpe hauteur
                     };
                 }
             }
@@ -728,13 +1104,60 @@ allPermutations.sort((a, b) => {
             break;
         }
     }
-
-        if (bestBlock) {
-            console.log(`🏆 Meilleur choix: ${bestBlock.ref} - ${bestBlock.useLength}×${bestBlock.useWidth}mm (score: ${bestScore.toFixed(1)})`);
-            console.log(`   Largeur utilisée: ${bestBlock.useWidth}mm sur ${maxWidth}mm disponible`);
+    
+    if (bestBlock) {
+        console.log(`🏆 Meilleur choix: ${bestBlock.originalRef} (${bestBlock.orientationName}) - Score: ${bestScore.toFixed(1)}`);
+        if (bestBlock.needsHeightCut) {
+            console.log(`  ✂️ Découpe hauteur: ${bestBlock.permWidth}→${bestBlock.useHeight}mm`);
+        }
+    }
+    
+    return bestBlock;
+}
+// Obtenir le stock filtré actuel
+getCurrentFilteredStock() {
+    return this.currentFilteredStock || [];
 }
 
-    return bestBlock;
+// Calculer les largeurs possibles pour un bloc du stock préparé
+calculatePossibleWidthsForStock(stockBlock, maxWidth, currentX, forbiddenJoints, allowViolations) {
+    const possibleWidths = [];
+    const blockMaxWidth = stockBlock.permLength;
+    
+    // OPTION 1 : Bloc entier
+    if (blockMaxWidth <= maxWidth) {
+        const violatesJoints = this.violatesJointConstraint(currentX + blockMaxWidth, forbiddenJoints);
+        if (allowViolations || !violatesJoints) {
+            possibleWidths.push({
+                width: blockMaxWidth,
+                bonus: 50,
+                strategy: `bloc entier`,
+                cuts: stockBlock.needsThicknessCut ? 1 : 0
+            });
+        }
+    }
+    
+    // OPTION 2 : Largeur max disponible
+    if (maxWidth < blockMaxWidth && maxWidth >= 200) {
+        possibleWidths.push({
+            width: maxWidth,
+            bonus: 30,
+            strategy: `découpe largeur`,
+            cuts: 1 + (stockBlock.needsThicknessCut ? 1 : 0)
+        });
+    }
+    
+    return possibleWidths;
+}
+
+// Calculer le score pour un bloc du stock préparé
+calculateStockBlockScore(stockBlock, widthOption, maxWidth, requiredHeight, violatesJoints) {
+    const coverageScore = (widthOption.width / maxWidth) * 50;
+    const sizeBonus = Math.min((widthOption.width * requiredHeight) / 500000, 25);
+    const cutPenalty = widthOption.cuts * 8;
+    const jointPenalty = violatesJoints ? -40 : 0;
+    
+    return Math.max(0, coverageScore + sizeBonus - cutPenalty + jointPenalty);
 }
 // Calculer les largeurs possibles pour une permutation spécifique
 calculatePossibleWidthsForPermutation(permutation, maxWidth, currentX, forbiddenJoints, allowViolations) {
@@ -894,54 +1317,53 @@ calculateBlockScoreForFixedHeight(orientation, useWidth, maxWidth, requiredHeigh
     
     return Math.max(0, totalScore);
 }
-// Placer un bloc avec une hauteur EXACTE imposée
+// Placer un bloc avec gestion des découpes en hauteur
 placeBlockWithFixedHeight(bestBlock, x, y, maxWidth, fixedHeight, rowNumber) {
     const useWidth = Math.min(bestBlock.useWidth, maxWidth);
-    const useHeight = fixedHeight; // ⚠️ HAUTEUR IMPOSÉE
-    const useThickness = Math.min(bestBlock.thickness, this.target.thickness);
+    const useHeight = fixedHeight; // Hauteur exacte imposée
+    const useThickness = bestBlock.finalThickness;
     
     // Calculer les découpes nécessaires
     let cuts = 0;
     const cutDetails = [];
     
-    // Découpe en largeur
-    const originalWidth = bestBlock.rotated ? bestBlock.width : bestBlock.length;
-    if (originalWidth > useWidth) {
+    // Découpe en longueur
+    if (bestBlock.permLength > useWidth) {
         cuts++;
-        cutDetails.push(`Largeur: ${originalWidth}→${useWidth}mm`);
+        cutDetails.push(`Longueur: ${bestBlock.permLength}→${useWidth}mm`);
     }
     
-    // Découpe en hauteur
-    const originalHeight = bestBlock.rotated ? bestBlock.length : bestBlock.width;
-    if (originalHeight > useHeight) {
+    //  Découpe en hauteur
+    if (bestBlock.permWidth > useHeight) {
         cuts++;
-        cutDetails.push(`Hauteur: ${originalHeight}→${useHeight}mm`);
+        cutDetails.push(`Largeur: ${bestBlock.permWidth}→${useHeight}mm`);
     }
     
     // Découpe en épaisseur
-    if (bestBlock.thickness > this.target.thickness) {
+    if (bestBlock.needsThicknessCut) {
         cuts++;
-        cutDetails.push(`Épaisseur: ${bestBlock.thickness}→${this.target.thickness}mm`);
+        cutDetails.push(`Épaisseur: ${bestBlock.permThickness}→${this.target.thickness}mm`);
     }
     
     // Calculer le volume de chute
-    const originalVolume = bestBlock.length * bestBlock.width * bestBlock.thickness;
+    const originalVolume = bestBlock.originalLength * bestBlock.originalWidth * bestBlock.originalThickness;
     const usedVolume = useWidth * useHeight * useThickness;
     const wasteVolume = originalVolume - usedVolume;
     
     return {
-        ref: bestBlock.ref,
+        ref: bestBlock.originalRef,
         family: bestBlock.family || 'N/A',
         quality: bestBlock.quality || 'N/A',
+        supplier: bestBlock.supplier || 'N/A',
         x: x,
         y: y,
         width: useWidth,
-        height: useHeight, // ⚠️ HAUTEUR UNIFORME
+        height: useHeight,
         thickness: useThickness,
-        originalLength: bestBlock.length,
-        originalWidth: bestBlock.width,
-        originalThickness: bestBlock.thickness,
-        rotated: bestBlock.rotated,
+        originalLength: bestBlock.originalLength,
+        originalWidth: bestBlock.originalWidth,
+        originalThickness: bestBlock.originalThickness,
+        rotated: bestBlock.orientationIndex > 0,
         cuts: cuts,
         cutDetails: cutDetails,
         wasteVolume: wasteVolume,
@@ -1068,6 +1490,7 @@ findBestBlock(maxWidth, targetHeight, currentX, forbiddenJoints) {
 
     return bestBlock;
 }
+
 // Mettre à jour le stock global après utilisation
 updateGlobalStock() {
     // Mettre à jour stockAvailability global avec les quantités locales
@@ -1080,7 +1503,7 @@ updateGlobalStock() {
     
     console.log('📦 Stock global mis à jour');
 }
-// Calculer le score d'un bloc selon votre logique
+// Calculer le score d'un bloc
 calculateBlockScore(orientation, useWidth, maxWidth, targetHeight, violatesJoints, blockThickness) {
     // 1. Score de couverture X (priorité absolue)
     const coverageScore = (useWidth / maxWidth) * 50; // 50% du score
@@ -1203,6 +1626,16 @@ calculateActualCoverage() {
     return (totalUsedArea / wallArea) * 100;
 }
 }
+        function validateOptimizationResults(results) {
+            results.forEach((result, index) => {
+            console.log(`Result ${index}:`, result);
+            // Ajoutez ici des vérifications spécifiques pour valider les résultats
+            if (result.length > 600 || result.width > 600 || result.thickness > 120) {
+                console.warn(`Invalid block size detected at result ${index}:`, result);
+            }
+        });
+        }
+
         
         function enrichBlocksWithOriginalDimensions(blocks, stockData) {
     return blocks.map(block => {
@@ -1351,7 +1784,7 @@ calculateActualCoverage() {
             const offsetX = 20;
             const offsetY = 20;
 
-            // Wall outline
+            // Contour du Mur
             const wallRect = document.createElement('div');
             wallRect.style.cssText = `position: absolute; left: ${offsetX}px; top: ${offsetY}px; 
                 width: ${targetLength * scale}px; height: ${targetWidth * scale}px; 
@@ -1544,7 +1977,7 @@ calculateActualCoverage() {
 
             container.innerHTML = html;
 
-        // Ajouter le bouton pour voir les détails des découpes
+        // Bouton pour voir les détails des découpes
             const detailButton = document.createElement('button');
             detailButton.style.cssText = `
                 width: 100%; margin-top: 10px; padding: 8px; 
@@ -1555,7 +1988,7 @@ calculateActualCoverage() {
             detailButton.onclick = showCuttingDetails;
             container.appendChild(detailButton);
 
-        // Summary existant (votre code)
+        // Summary existant
             const totalWaste = Object.values(groups).reduce((sum, data) => sum + data.waste, 0);
             const totalCuts = Object.values(groups).reduce((sum, data) => sum + data.cuts, 0);
             const totalViolations = Object.values(groups).reduce((sum, data) => sum + data.violations, 0);
@@ -1697,10 +2130,10 @@ calculateActualCoverage() {
                 legendY += 10;
             });
 		 // Nouvelle page pour les détails des casiers
+            // Version simple et robuste
             doc.addPage();
             doc.setFontSize(16);
             doc.text('Détail des Casiers Utilisés', 20, 20);
-            doc.setFontSize(10);
 
             const groups = {};
             lastOptimizationResult.blocks.forEach(block => {
@@ -1720,31 +2153,70 @@ calculateActualCoverage() {
                 groups[block.ref].rows.add(block.row);
             });
 
+            // Tableau simple avec lignes
             let yPos = 40;
-            doc.text('Casier | Famille | Qualité | Qté | Rangées | Découpes | Chutes (mm³)', 20, yPos);
-            yPos += 5;
-            doc.line(20, yPos, 190, yPos);
-            yPos += 10;
+            doc.setFontSize(10);
 
-            Object.entries(groups).forEach(([ref, data]) => {
+            // En-tête avec fond gris
+            doc.setFillColor(220, 220, 220);
+            doc.rect(20, yPos - 3, 170, 10, 'F');
+            doc.setTextColor(0, 0, 0);
+            doc.text('Casier', 25, yPos + 3);
+            doc.text('Famille', 60, yPos + 3);
+            doc.text('Qté', 100, yPos + 3);
+            doc.text('Rangées', 120, yPos + 3);
+            doc.text('Découpes', 150, yPos + 3);
+            doc.text('Chutes (m³)', 170, yPos + 3);
+
+            // Ligne de séparation
+            yPos += 8;
+            doc.line(20, yPos, 190, yPos);
+            yPos += 5;
+
+            // Données
+            Object.entries(groups).forEach(([ref, data], index) => {
                 if (yPos > 270) {
                     doc.addPage();
                     yPos = 20;
                 }
-                const rowsList = Array.from(data.rows).sort().join(', ');
-                const wasteVolume = Math.round(data.waste);
-                const line = `${ref} | ${data.family} | ${data.quality} | x${data.count} | ${rowsList} | ${data.cuts} | ${wasteVolume} mm³`;
-                doc.text(line, 20, yPos);
+                
+                // Alternance de couleur de fond
+                if (index % 2 === 0) {
+                    doc.setFillColor(248, 248, 248);
+                    doc.rect(20, yPos - 2, 170, 8, 'F');
+                }
+                
+                const rowsList = Array.from(data.rows).sort().join(',');
+                const wasteVolumeM3 = (data.waste / 1e9).toFixed(3);
+                
+                doc.setTextColor(0, 0, 0);
+                doc.text(ref, 25, yPos + 2);
+                doc.text(data.family.substring(0, 12), 60, yPos + 2);
+                doc.text(`×${data.count}`, 100, yPos + 2);
+                doc.text(rowsList, 120, yPos + 2);
+                doc.text(data.cuts.toString(), 150, yPos + 2);
+                doc.text(wasteVolumeM3, 170, yPos + 2);
+                
                 yPos += 8;
             });
+
+            // Résumé
+            yPos += 10;
+            doc.setFillColor(52, 73, 94);
+            doc.rect(20, yPos - 2, 170, 8, 'F');
+            doc.setTextColor(255, 255, 255);
+            const totalCasiers = Object.keys(groups).length;
+            const totalBlocs = lastOptimizationResult.blocks.length;
+            const totalWasteM3 = (Object.values(groups).reduce((sum, data) => sum + data.waste, 0) / 1e9).toFixed(2);
+
+            doc.text(`RÉSUMÉ: ${totalCasiers} casiers • ${totalBlocs} blocs • ${totalWasteM3} m³ chutes`, 25, yPos + 2);
+            window.open(doc.output('bloburl'))
             doc.save(`optimisation_mur_jointures_${targetLength}x${targetWidth}x${targetThickness}_${date.replace(/\//g, '-')}.pdf`);
         }
 
-        function exportToCSV() {
-            // Function removed as requested
-        }
+       
 
-        // Event listeners
+        // Contrôle d'événements
         ['targetLength', 'targetWidth', 'targetThickness', 'numRows', 'jointOffset'].forEach(id => {
             const element = document.getElementById(id);
             if (element) {
@@ -1777,7 +2249,7 @@ calculateActualCoverage() {
                         const rows = XLSX.utils.sheet_to_json(sheet, {header: 1});
 
                         stockData = parseStockData(rows);
-                        // CORRECTION ESSENTIELLE : Initialiser les objets de stock
+                        // Initialiser les objets de stock
                         originalStockQuantities = {};
                         stockAvailability = {};
 
@@ -1842,6 +2314,7 @@ calculateActualCoverage() {
                 ref: findCol(['CASIER']),
                 family: findCol(['FAMILLE']),
                 quality: findCol(['QUALITÉ', 'QUALITE']),
+                designation : findCol (['DESIGNATION','DÉSIGNATION']),
                 supplier: findCol(['QUALITÉ FOURNISSEUR','FOURNISSEUR','FOURNISSEUR','FOURNI']),
                 length: findCol(['LONGUEUR','LONG']),
                 width: findCol(['LARGEUR','LARG']),
@@ -1867,6 +2340,7 @@ calculateActualCoverage() {
                         ref: String(row[columnMap.ref] || '').trim(),
                         family: String(row[columnMap.family] || '').trim(),
                         quality: String(row[columnMap.quality] || '').trim(),
+                        designation: String(row[columnMap.designation] || '').trim(),
                         supplier: String(row[columnMap.supplier] || '').trim(),
                         length: Number(row[columnMap.length]) || 0,
                         width: Number(row[columnMap.width]) || 0,
@@ -1901,30 +2375,51 @@ calculateActualCoverage() {
         return parsedData;
         }
         // Fonction pour parser les quantités avec unités (1 PC, 2 SAC, etc.)
+// Version ultra-robuste pour tous les formats
 function parseStockQuantity(stockCell) {
     if (!stockCell) return 0;
     
-    const stockStr = String(stockCell).trim().toUpperCase();
+    let stockStr = String(stockCell).trim().toUpperCase();
     
     // Si c'est déjà un nombre pur
     if (!isNaN(stockStr) && stockStr !== '') {
         return parseInt(stockStr) || 0;
     }
     
-    // Extraire le nombre avant l'unité (PC, SAC, UD, etc.)
-    const patterns = [
-        /^(\d+(?:[,\.]\d+)?)\s*(?:PC|SAC|UD|UL|KG|PIECES?|SACS?|UNITES?|LITRES?)?$/i,
-        /^(\d+(?:[,\.]\d+)?)/  // Fallback: juste le premier nombre trouvé
-    ];
+    console.log(`🔍 Parsing: "${stockCell}"`);
     
-    for (const pattern of patterns) {
-        const match = stockStr.match(pattern);
-        if (match) {
-            const numberStr = match[1].replace(',', '.');
-            const quantity = parseInt(numberStr) || 0;
-            console.log(`📦 Stock parsé: "${stockCell}" → ${quantity}`);
-            return quantity;
+    // ⚠️ NETTOYAGE AVANCÉ : Gérer espaces ET points comme séparateurs de milliers
+    // Enlever les espaces entre chiffres
+    stockStr = stockStr.replace(/(\d)\s+(\d)/g, '$1$2');
+    
+    // Enlever les points qui séparent les milliers (garder seulement le dernier point/virgule comme décimale)
+    // Ex: "1.544.123,50" → "1544123,50"
+    const parts = stockStr.split(/[,\.]/);
+    if (parts.length > 2) {
+        // Plusieurs séparateurs : les premiers sont des milliers, le dernier est décimal
+        const integerPart = parts.slice(0, -1).join('');
+        const decimalPart = parts[parts.length - 1];
+        stockStr = integerPart + '.' + decimalPart;
+    } else if (parts.length === 2) {
+        // Un seul séparateur : vérifier s'il s'agit de milliers ou de décimales
+        const lastPart = parts[1];
+        if (lastPart.length === 3 && /^\d{3}$/.test(lastPart)) {
+            // 3 chiffres après : probablement des milliers (ex: "1.544")
+            stockStr = parts.join('');
+        } else {
+            // Sinon : décimales (ex: "1.5")
+            stockStr = parts[0] + '.' + lastPart;
         }
+    }
+    
+    console.log(`🔧 Après nettoyage: "${stockCell}" → "${stockStr}"`);
+    
+    // Extraire le nombre
+    const match = stockStr.match(/^(\d+(?:\.\d+)?)/);
+    if (match) {
+        const quantity = parseInt(match[1]) || 0;
+        console.log(`📦 Stock final: "${stockCell}" → ${quantity}`);
+        return quantity;
     }
     
     console.warn(`⚠️ Stock non parsable: "${stockCell}" → 0`);
@@ -2280,6 +2775,8 @@ console.log('✅ Système de collecte simplifié chargé');
 // ========================================
 
 // 1. FONCTION POUR CALCULER LES DÉTAILS DE DÉCOUPES
+
+// Calculer les détails de découpes - VERSION PERMUTATIONS
 function calculateCuttingDetails(blocks) {
     const cuttingDetails = {
         totalBlocks: blocks.length,
@@ -2297,32 +2794,40 @@ function calculateCuttingDetails(blocks) {
     };
 
     blocks.forEach(block => {
-        // Trouver le casier original dans le stock
-        const originalStock = stockData.find(stock => stock.ref === block.ref);
+        // Trouver le casier original
+        let originalStock = stockData.find(stock => stock.ref === block.ref);
+        if (!originalStock) {
+            originalStock = stockData.find(stock => stock.ref === block.originalRef);
+        }
         
         if (!originalStock) {
-            console.warn(`Casier original ${block.ref} non trouvé dans le stock`);
+            console.warn(`Casier original ${block.ref || block.originalRef} non trouvé dans le stock`);
             return;
         }
 
-        // Dimensions originales
-        const originalLength = originalStock.length;
-        const originalWidth = originalStock.width;
-        const originalThickness = originalStock.thickness;
+        //  Reconstruire la permutation utilisée
+        const permutationInfo = this.reconstructPermutation(block, originalStock);
+        
+        // Dimensions de la permutation (avant découpes finales)
+        const permLength = permutationInfo.permLength;
+        const permWidth = permutationInfo.permWidth;
+        const permThickness = permutationInfo.permThickness;
+        
+        // Dimensions utilisées dans le mur (après découpes finales)
+        const usedLength = block.width;
+        const usedWidth = block.height;
+        const usedThickness = block.thickness;
 
-        // Dimensions utilisées dans le mur
-        const usedLength = block.width;  // Dans votre code, block.width est la longueur utilisée
-        const usedWidth = block.height;  // block.height est la largeur utilisée
-        const usedThickness = originalThickness; // L'épaisseur reste la même
+        // Calculer les découpes par rapport à la PERMUTATION, pas l'original
+        const needsCutLength = permLength > usedLength;
+        const needsCutWidth = permWidth > usedWidth;
+        const needsCutThickness = permThickness > usedThickness;
+        const hasAnyCuts = needsCutLength || needsCutWidth || needsCutThickness;
 
-        // Calculer les découpes nécessaires
-        const needsCutLength = originalLength > usedLength;
-        const needsCutWidth = originalWidth > usedWidth;
-        const hasAnyCuts = needsCutLength || needsCutWidth;
-
-        // Calculer les dimensions des chutes
-        const wasteLength = needsCutLength ? originalLength - usedLength : 0;
-        const wasteWidth = needsCutWidth ? originalWidth - usedWidth : 0;
+        // Calculer les dimensions des chutes par rapport à la permutation
+        const wasteLength = needsCutLength ? permLength - usedLength : 0;
+        const wasteWidth = needsCutWidth ? permWidth - usedWidth : 0;
+        const wasteThickness = needsCutThickness ? permThickness - usedThickness : 0;
 
         if (hasAnyCuts) {
             cuttingDetails.blocksWithCuts++;
@@ -2336,22 +2841,30 @@ function calculateCuttingDetails(blocks) {
                 cuttingDetails.cutsByType.widthOnly++;
             }
 
-            // Calculer les chutes détaillées
+            // Calculer les chutes depuis la permutation
             const wasteDetails = [];
 
-            if (needsCutLength && wasteLength > 5) { // Ignorer les très petites chutes
+            if (needsCutLength && wasteLength > 5) {
                 wasteDetails.push({
                     type: 'Chute longueur',
-                    dimensions: `${wasteLength} × ${originalWidth} × ${originalThickness}`,
-                    volume: wasteLength * originalWidth * originalThickness
+                    dimensions: `${wasteLength} × ${permWidth} × ${permThickness}`,
+                    volume: wasteLength * permWidth * permThickness
                 });
             }
 
-            if (needsCutWidth && wasteWidth > 5) { // Ignorer les très petites chutes
+            if (needsCutWidth && wasteWidth > 5) {
                 wasteDetails.push({
                     type: 'Chute largeur',
-                    dimensions: `${usedLength} × ${wasteWidth} × ${originalThickness}`,
-                    volume: usedLength * wasteWidth * originalThickness
+                    dimensions: `${usedLength} × ${wasteWidth} × ${permThickness}`,
+                    volume: usedLength * wasteWidth * permThickness
+                });
+            }
+
+            if (needsCutThickness && wasteThickness > 5) {
+                wasteDetails.push({
+                    type: 'Chute épaisseur',
+                    dimensions: `${usedLength} × ${usedWidth} × ${wasteThickness}`,
+                    volume: usedLength * usedWidth * wasteThickness
                 });
             }
 
@@ -2359,37 +2872,45 @@ function calculateCuttingDetails(blocks) {
             if (needsCutLength && needsCutWidth && wasteLength > 5 && wasteWidth > 5) {
                 wasteDetails.push({
                     type: 'Chute angle',
-                    dimensions: `${wasteLength} × ${wasteWidth} × ${originalThickness}`,
-                    volume: wasteLength * wasteWidth * originalThickness
+                    dimensions: `${wasteLength} × ${wasteWidth} × ${permThickness}`,
+                    volume: wasteLength * wasteWidth * permThickness
                 });
             }
 
             // Calculer le volume total de chutes
             const totalWasteVolume = wasteDetails.reduce((sum, waste) => sum + waste.volume, 0);
             
-            // Détail de la découpe
+            // Détail de la découpe avec permutation
             const cutDetail = {
-                ref: block.ref,
+                ref: block.ref || block.originalRef,
                 family: block.family || 'N/A',
                 quality: block.quality || 'N/A',
-                // Dimensions originales
-                originalDimensions: `${originalLength} × ${originalWidth} × ${originalThickness}`,
-                originalLength: originalLength,
-                originalWidth: originalWidth,
-                originalThickness: originalThickness,
-                // Dimensions utilisées
+                // Dimensions originales du casier
+                originalDimensions: `${originalStock.length} × ${originalStock.width} × ${originalStock.thickness}`,
+                originalLength: originalStock.length,
+                originalWidth: originalStock.width,
+                originalThickness: originalStock.thickness,
+                // Dimensions de la permutation
+                permutationDimensions: `${permLength} × ${permWidth} × ${permThickness}`,
+                permLength: permLength,
+                permWidth: permWidth,
+                permThickness: permThickness,
+                orientationUsed: permutationInfo.orientationName,
+                rotated: permutationInfo.rotated,
+                // Dimensions utilisées dans le mur
                 usedDimensions: `${usedLength} × ${usedWidth} × ${usedThickness}`,
                 usedLength: usedLength,
                 usedWidth: usedWidth,
                 usedThickness: usedThickness,
-                // Informations sur les découpes
-                cutType: needsCutLength && needsCutWidth ? 'Longueur + Largeur' : 
-                         needsCutLength ? 'Longueur seulement' : 'Largeur seulement',
+                // Types de découpes basés sur la permutation
+                cutType: this.determineCutType(needsCutLength, needsCutWidth, needsCutThickness),
                 needsCutLength: needsCutLength,
                 needsCutWidth: needsCutWidth,
+                needsCutThickness: needsCutThickness,
                 // Dimensions des chutes
                 wasteLength: wasteLength,
                 wasteWidth: wasteWidth,
+                wasteThickness: wasteThickness,
                 wasteDetails: wasteDetails,
                 wasteVolume: totalWasteVolume,
                 // Autres informations
@@ -2397,7 +2918,8 @@ function calculateCuttingDetails(blocks) {
                 position: `(${block.x}, ${block.y})`,
                 cuts: block.cuts || 0,
                 violatesJoints: block.violatesJoints || false,
-                efficiency: ((usedLength * usedWidth * usedThickness) / (originalLength * originalWidth * originalThickness)) * 100
+                // Efficacité basée sur la permutation
+                efficiency: ((usedLength * usedWidth * usedThickness) / (originalStock.length * originalStock.width * originalStock.thickness)) * 100
             };
             
             cuttingDetails.detailedCuts.push(cutDetail);
@@ -2420,8 +2942,84 @@ function calculateCuttingDetails(blocks) {
     });
 
     cuttingDetails.totalWastePieces = cuttingDetails.blocksWithCuts;
-
     return cuttingDetails;
+}
+
+// Reconstruire la permutation utilisée
+function reconstructPermutation(block, originalStock) {
+    const originalDims = [originalStock.length, originalStock.width, originalStock.thickness];
+    
+    // Si le bloc a des informations sur la permutation (nouveau système)
+    if (block.permutationUsed || block.orientationIndex !== undefined) {
+        // Reconstruire based sur l'index d'orientation
+        const orientationIndex = block.orientationIndex || 0;
+        const orientations = [
+            { length: originalDims[0], width: originalDims[1], thickness: originalDims[2], name: 'L×l×É', rotated: false },
+            { length: originalDims[0], width: originalDims[2], thickness: originalDims[1], name: 'L×É×l', rotated: true },
+            { length: originalDims[1], width: originalDims[0], thickness: originalDims[2], name: 'l×L×É', rotated: true },
+            { length: originalDims[1], width: originalDims[2], thickness: originalDims[0], name: 'l×É×L', rotated: true },
+            { length: originalDims[2], width: originalDims[0], thickness: originalDims[1], name: 'É×L×l', rotated: true },
+            { length: originalDims[2], width: originalDims[1], thickness: originalDims[0], name: 'É×l×L', rotated: true }
+        ];
+        
+        const orientation = orientations[orientationIndex] || orientations[0];
+        return {
+            permLength: orientation.length,
+            permWidth: orientation.width,
+            permThickness: orientation.thickness,
+            orientationName: orientation.name,
+            rotated: orientation.rotated
+        };
+    }
+    
+    // Fallback : Essayer de deviner la permutation (ancien système)
+    // Chercher quelle permutation donne des dimensions compatibles
+    const usedWidth = block.width;
+    const usedHeight = block.height;
+    const usedThickness = block.thickness;
+    
+    const orientations = [
+        { length: originalDims[0], width: originalDims[1], thickness: originalDims[2], name: 'L×l×É', rotated: false },
+        { length: originalDims[0], width: originalDims[2], thickness: originalDims[1], name: 'L×É×l', rotated: true },
+        { length: originalDims[1], width: originalDims[0], thickness: originalDims[2], name: 'l×L×É', rotated: true },
+        { length: originalDims[1], width: originalDims[2], thickness: originalDims[0], name: 'l×É×L', rotated: true },
+        { length: originalDims[2], width: originalDims[0], thickness: originalDims[1], name: 'É×L×l', rotated: true },
+        { length: originalDims[2], width: originalDims[1], thickness: originalDims[0], name: 'É×l×L', rotated: true }
+    ];
+    
+    // Trouver l'orientation qui permet les dimensions utilisées
+    for (const orientation of orientations) {
+        if (orientation.length >= usedWidth && 
+            orientation.width >= usedHeight && 
+            orientation.thickness >= usedThickness) {
+            return {
+                permLength: orientation.length,
+                permWidth: orientation.width,
+                permThickness: orientation.thickness,
+                orientationName: orientation.name,
+                rotated: orientation.rotated
+            };
+        }
+    }
+    
+    // Si rien ne marche, utiliser l'orientation normale
+    return {
+        permLength: originalDims[0],
+        permWidth: originalDims[1],
+        permThickness: originalDims[2],
+        orientationName: 'L×l×É',
+        rotated: false
+    };
+}
+
+// ⚠️ NOUVELLE FONCTION : Déterminer le type de découpe
+function determineCutType(needsCutLength, needsCutWidth, needsCutThickness) {
+    const cuts = [];
+    if (needsCutLength) cuts.push('Longueur');
+    if (needsCutWidth) cuts.push('Largeur');
+    if (needsCutThickness) cuts.push('Épaisseur');
+    
+    return cuts.length > 0 ? cuts.join(' + ') : 'Aucune';
 }
 // 2. FONCTION POUR AFFICHER LES DÉTAILS DE DÉCOUPES
 function showCuttingDetails() {
