@@ -20,9 +20,9 @@
                 <div class="input-group">
                     <label>Dimensions du Mur (mm)</label>
                     <div class="dimensions-grid">
-                        <div><label>Longueur</label><input type="number" id="targetLength" value="3000" min="100"></div>
-                        <div><label>Hauteur</label><input type="number" id="targetWidth" value="2000" min="100"></div>
-                        <div><label>Épaisseur</label><input type="number" id="targetThickness" value="250" min="50"></div>
+                        <div><label>Longueur</label><input type="number" id="targetLength" value="3000" min="100" step="10"></div>
+                        <div><label>Hauteur</label><input type="number" id="targetWidth" value="2000" min="100" step="10" ></div>
+                        <div><label>Épaisseur</label><input type="number" id="targetThickness" value="120" min="50" step="10"></div>
                     </div>
                 </div>
                 <div class="input-group">
@@ -44,7 +44,7 @@
                     <input type="file" id="excelFile" accept=".xlsx,.xls" style="border: 2px dashed #3498db; background: #f8f9fa;">
                 </div>
                 <div class="btn-grid">
-                    <button class="btn btn-secondary" onclick="loadExample()">📝 Charger Exemple</button>
+                    <button class="btn btn-secondary" onclick="loadExample()">📝 Charger Stock Standard</button>
                     <button class="btn btn-danger" onclick="clearStock()">🗑️ Vider Stock</button>
                 </div>
                 <div class="input-group">
@@ -55,13 +55,14 @@
                         <div></div>
                     </div>
                 </div>
-                <div id="importStatus" style="margin-top: 10px; display: none;"></div>
+                <!-- <div id="importStatus" style="margin-top: 10px; display: none;"></div> -->
+                <div id="importStatus" style="max-height: 350px; overflow-x: auto; margin-top : 15px;"></div>
                 <div class="input-group">
                     <label>Stock Chargé (<span id="stockCount">0</span> casiers - <span id="filteredCount">0</span> filtrés)</label>
                     <div class="stock-container">
                         <table class="stock-table">
-                            <thead><tr><th>Casier</th><th>Famille</th><th>Qualité Générique</th><th>Qualité Fournisseur</th><th>Longueur</th><th>Largeur</th><th>Épaisseur</th><th>Stock Initial</th><th>Stock Actuel</th><th>Compatible</th><th>Score</th></tr></thead>
-                            <tbody id="stockTableBody"><tr><td colspan="11" style="text-align: center; color: #666; padding: 20px;">Chargez un stock pour commencer</td></tr></tbody>
+                            <thead><tr><th>Famille</th><th>Casier</th><th>Qualité Générique</th><th>Qualité Fournisseur</th><th>Désignation</th><th>Longueur</th><th>Largeur</th><th>Épaisseur</th><th>Stock Initial</th><th>Stock Actuel</th><th>Compatible</th><th>Score</th></tr></thead>
+                            <tbody id="stockTableBody"><tr><td colspan="13" style="text-align: center; color: #666; padding: 20px;">Chargez un stock pour commencer</td></tr></tbody>
                         </table>
                     </div>
                 </div>
