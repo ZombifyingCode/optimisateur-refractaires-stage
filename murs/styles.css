@@ -6,12 +6,12 @@
             padding: 20px; 
         }
         .container { 
-            max-width: 1200px; 
+            max-width: 1500px; 
             margin: 0 auto; 
             background: white; 
             border-radius: 15px; 
             box-shadow: 0 15px 50px rgba(0,0,0,0.2); 
-            overflow: hidden; 
+            overflow: auto; 
         }
         .header { 
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
@@ -99,7 +99,7 @@
             margin-top: 10px; 
             background: white; 
             border-radius: 6px; 
-            overflow: hidden; 
+            overflow: auto; 
             font-size: 0.9rem; 
         }
         .stock-table th, .stock-table td { 
